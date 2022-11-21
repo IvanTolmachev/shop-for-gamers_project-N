@@ -1,17 +1,20 @@
 .hero{
     max-width: 1280px;
-    min-height: 600px;
+   
     margin: 0 auto;
     padding: 180px 0;
     background-color:transparent;
     background-image: url(../images/hero/Fon_hero.png),
-    url(../images/hero/mousemob.png),
-    url(../images/hero/headphonesmob.png),
-    url(../images/hero/keyboardmob.png);
+    url(../images/hero/Framemob.png);
+    // url(../images/hero/mousemob.png),
+    // url(../images/hero/headphonesmob.png),
+    // url(../images/hero/keyboardmob.png);
     
-    background-size: cover, 60px 99px, 150px 186px, 88px 42px;
+    background-size: cover, 304px 472px; 
+    // 60px 99px, 150px 186px, 88px 42px;
     background-repeat: no-repeat;
-    background-position: left -250px top -20px, top 57px left 16px,  top 0px right 0px, top 394px right 150px;
+    background-position: left -350px top -50px, top 0 right 0;
+    // top 57px left 16px,  top 0px right 0px, top 394px right 150px;
 //    background-position-x: 70%;
 
     @media screen and (min-width: 480px) {
@@ -20,24 +23,31 @@
 
     @media screen and (min-width: 768px) {
         width: 768px;
-        height: 860px;
+       
+        padding: 154px 0;
         background-image: url(../images/hero/Fon_hero.png),
-    url(../images/hero/mousetab.png),
-    url(../images/hero/keyboardtab.png),
-    url(../images/hero/headphonestab.png);
-        background-size: cover, 100px 165px, 143px 69px, 180px 223px;
-        background-position: left -250px top -20px, top 49px right 166px, top 469px right 189px, top 226px right 20px ;
+        url(../images/hero/Frametab.png);
+    // url(../images/hero/mousetab.png),
+    // url(../images/hero/keyboardtab.png),
+    // url(../images/hero/headphonestab.png);
+        background-size: cover, 379px 616px;
+        // 100px 165px, 143px 69px, 180px 223px;
+        background-position: left -160px top -55px, top 33px right 0;
+        // top 49px right 166px, top 469px right 189px, top 226px right 20px ;
     }
 
     @media screen and (min-width: 1280px) {
         width: 1280px;
         height: 724px;
-        background-image: url(../images/hero/Fon_hero.png),
-    url(../images/hero/mousedesk.png),
-    url(../images/hero/keyboarddesk.png),
-    url(../images/hero/headphonesdesk.png);
-        background-size: cover, 133px 220px, 230px 111px, 270px 335px;
-        background-position: center, top 69px right 459px, bottom 83px right 447px, top 155px right 91px;
+        background-image: url(../images/hero/Fon_hero.png), 
+        url(../images/hero/Framedesk.png);
+    // url(../images/hero/mousedesk.png),
+    // url(../images/hero/keyboarddesk.png),
+    // url(../images/hero/headphonesdesk.png);
+        background-size: cover, 668px 652px;
+        // , 133px 220px, 230px 111px, 270px 335px;
+        background-position: top -140px left 0, right 78px top 0px;
+        //  top 69px right 459px, bottom 83px right 447px, top 155px right 91px;
     }
 }
 .hero-text{
@@ -50,14 +60,16 @@ color: #FFFFFF;
   
 @media screen and (min-width: 768px) {
     text-align: left;
-    margin:0 0 110px 40px ;
+    margin:0 0 94px 40px ;
 max-width: 388px;
 font-size: 56px;
 line-height: 1.18;
 }
 @media screen and (min-width: 1280px) {
-    text-align: left;
-    margin:0 0 25px 100px;
+    
+    margin-bottom: 25px;
+    margin-left: 100px;
+  
 max-width: 515px;
 font-size: 64px;
 line-height: 1.18;
