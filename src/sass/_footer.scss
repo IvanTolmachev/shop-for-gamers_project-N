@@ -1,16 +1,15 @@
 .footer {
   background-color: $footerBgColor;
-  padding-top: 25px;
-  padding-left: 16px;
-  padding-bottom: 24px;
-  padding-right: 32px;
-  @include tablet {
-    padding: 40px;
-  }
 }
 .page-footer {
+  padding-top: 25px;
+  padding-bottom: 24px;
+  // @include tablet {
+
+  // }
   @include tablet {
     display: flex;
+    padding: 40px;
   }
 }
 .logo-footer {
@@ -18,8 +17,11 @@
   font-size: 24px;
   line-height: 1.17;
   text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+  max-width: 115px;
   @include mobile {
-    margin-bottom: 25px;
+    // margin-bottom: 25px;
   }
   @include tablet {
     margin-right: 61px;
