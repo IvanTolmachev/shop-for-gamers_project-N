@@ -1,0 +1,15 @@
+VANTA.FOG({
+  el: '#bg-mob',
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.0,
+  minWidth: 200.0,
+  highlightColor: 0x1e3c1e,
+  midtoneColor: 0x146622,
+  lowlightColor: 0x274055,
+  baseColor: 0x0,
+  blurFactor: 0.53,
+  speed: 0.5,
+  zoom: 0.9,
+});
