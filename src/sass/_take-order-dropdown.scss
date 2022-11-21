@@ -1,0 +1,315 @@
+.order-form-container {
+  padding: 0 16px 48px;
+  background-color: $primaryBgColor;
+
+  @media screen and (min-width: 768px) {
+    padding: 0 89px 120px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 0 40px 120px;
+    // max-width: 1280px;
+    // margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .order-form__title {
+    color: $primaryTextColor;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 48px;
+  }
+
+  .order-form {
+    @media screen and (min-width: 638px) {
+      width: 589px;
+      margin: auto;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+    }
+
+    @media screen and (min-width: 1280px) {
+      margin: 0;
+      width: 100%;
+      max-width: 1280px;
+    }
+  }
+
+  .order-form__input--pos {
+    @media screen and (min-width: 1280px) {
+      display: flex;
+      column-gap: 20px;
+    }
+  }
+
+  .order-form__input-container {
+    display: block;
+    position: relative;
+
+    @media screen and (min-width: 1280px) {
+      width: calc(100% - 20px);
+    }
+  }
+
+  .order-form__input:not(:first-child) {
+    margin-top: 40px;
+  }
+
+  .order-form__input {
+    width: 100%;
+    height: 24px;
+    padding: 0;
+    color: $secondaryTextColor;
+    font-size: 16px;
+    line-height: 1.25;
+
+    border: none;
+    border-bottom: 1px solid $primaryTextColor;
+    background-color: transparent;
+    outline: none;
+
+
+    // &:hover,
+    // &:focus {
+    //       cursor: pointer;
+    // }
+  }
+
+  .order-form__input::placeholder {
+    text-transform: capitalize;
+    color: $secondaryTextColor;
+
+  }
+
+  // .dropdown__group {
+  //       z-index: 1;
+  // }
+
+  .dropdown__item {
+    background-color: $primaryBgColor;
+    // width: 200px;
+    // height: 24px;
+    // &:hover {
+    //       background-color: brown;
+    // }
+  }
+
+  .dropdown__icon-wrap {
+    width: 22px;
+    height: 23px;
+    background-color: $primaryBgColor;
+    position: absolute;
+    right: -1px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // <button class="testing" type="button"></button>
+  // .testing {
+  //       position: absolute;
+  //       z-index: 1;
+  //       width: 100%;
+  //       height: 24px;
+  //       top: 46%;
+  //       border: none;
+  //       visibility: hidden;
+  //       // background-color: transparent;
+  //       // pointer-events: visibleFill;
+  // }
+
+  .dropdown__icon {
+    // position: relative;
+    // top: 50%;
+    // left: 50%;
+    margin: auto;
+    fill: $secondaryTextColor;
+    transform-origin: 50% 50%;
+    transform: rotate(0turn);
+    transition: transform $durationFunction $timingFunction;
+  }
+
+  // .dropdown__icon::before {}
+  // .dropdown__icon::after {}
+
+  .order-form__dropdown {
+    &:focus .dropdown__icon {
+      transform: rotate(0.5turn);
+    }
+  }
+
+  .arrow-color--pos {
+    top: 45%;
+  }
+
+  .arrow-amount--pos {
+    top: 68%
+  }
+
+  .arrow-payment--pos {
+    top: 91%;
+  }
+
+  .order-form__comment--pos {
+    margin-top: 40px;
+
+    @media screen and (min-width: 1280px) {
+      margin-top: 0;
+      width: calc(100% - 20px);
+    }
+
+  }
+
+  .order-form__comment-label {
+    color: $textareaTextColor;
+  }
+
+  .order-form__comment {
+    width: 100%;
+    height: 95px;
+
+    border: 1px solid $primaryTextColor;
+    background-color: transparent;
+    color: $secondaryTextColor;
+    resize: none;
+    outline: none;
+
+    @media screen and (min-width: 768px) {
+      height: 256px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      height: calc(100% - 24px);
+    }
+  }
+
+  .order-form__btn-container {
+    // text-align: center;
+    margin-top: 24px;
+
+    // @media screen and (min-width: 768px) {}
+
+    @media screen and (min-width: 1280px) {
+      display: flex;
+      justify-content: center;
+      // align-items: flex-start;
+      column-gap: 20px;
+
+      margin-top: 48px;
+    }
+  }
+
+  .order-form__btn {
+    display: block;
+    margin: auto;
+
+    width: 174px;
+    padding: 16px auto;
+
+    color: inherit;
+    border-radius: $primaryBorderRadius;
+    border: 1px solid $primaryTextColor;
+    box-shadow: none;
+    background-color: transparent;
+    transition: box-shadow $durationFunction $timingFunction, background-color $durationFunction $timingFunction, color $durationFunction $timingFunction;
+
+    @media screen and (min-width: 768px) {
+      width: 306px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      margin: 0;
+    }
+
+    &:hover,
+    &:focus {
+      color: $primaryBgColor;
+      background-color: $hoverColor;
+      box-shadow: $boxShadow;
+      cursor: pointer;
+    }
+
+    &-sale {
+      color: $primaryBgColor;
+      background-color: $btnBgColor;
+    }
+
+    &-cart {
+      color: $primaryTextColor;
+      margin-top: 16px;
+
+      @media screen and (min-width: 768px) {
+        margin-top: 24px;
+      }
+
+      @media screen and (min-width: 1280px) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .btn-sale-text,
+  .btn-cart-text {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    text-transform: uppercase;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      font-size: 32px;
+    }
+
+  }
+
+  // -------------- Модалки ------------------ 
+
+  // .modal-deck {
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: rgba(0, 0, 0, 0.281);
+  // }
+
+  // .order-form-modal1 {
+  //   position: relative;
+  //   width: 272px;
+  //   background-color: $primaryBgColor;
+  // }
+
+  // .order-form-modal1__close {
+  //   position: absolute;
+  //   top: 20px;
+  //   right: 20px;
+  //   border-radius: 50%;
+  //   border: 2px solid $primaryTextColor;
+  //   background-color: $primaryBgColor;
+  // }
+
+  // .order-form-modal1__icon-close {
+  //   fill: $primaryTextColor;
+  // }
+
+  .order-form-modal1__title {}
+
+  .order-form-modal1__btn {}
+
+  .order-form-modal2 {}
+
+  .order-form-modal2__title {}
+
+  .order-form-modal2__btn {}
+
+  // <!-- <select
+  //     class="order-form__input order-form__dropdown"
+  //     name="quantity"
+  //     required
+  //   >
+  //     <option class="dropdown__item" value="">Quantity</option>
+  //     <option class="dropdown__item" value="1">1</option>
+  //     <option class="dropdown__item" value="2">2</option>
+  //   </select> -->
+
+}

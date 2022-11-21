@@ -1,0 +1,123 @@
+<div class="order-form-container">
+  <form class="order-form" for="modal-sale">
+    <h2 class="order-form__title">Make choice</h2>
+    <div class="order-form__input--pos">
+      <div class="order-form__input-container">
+        <input
+          class="order-form__input"
+          type="tel"
+          name="сustomer_name"
+          placeholder="Name"
+          required
+          title="Username must be two words separated by space."
+          pattern="[a-zA-Z]+\s[a-zA-Z]"
+        />
+        <input
+          class="order-form__input"
+          type="email"
+          name="сustomer_email"
+          placeholder="E-mail"
+          autocomplete="email"
+          required
+        />
+
+        <select
+          class="order-form__input order-form__dropdown"
+          name="color-option"
+          required
+        >
+          <option class="dropdown__item" value="">Color style</option>
+          <option class="dropdown__item" value="K9D-BO">
+            K9D Black Orange
+          </option>
+          <option class="dropdown__item" value="K9D-SG">K9D Silver Gray</option>
+          <option class="dropdown__item" value="K9U-WB">K9U White Blue</option>
+        </select>
+        <div class="dropdown__icon-wrap arrow-color--pos">
+          <svg class="dropdown__icon" width="18" height="13">
+            <use class="" href="./images/icons.svg#icon-down-arrow"></use>
+          </svg>
+        </div>
+        <input
+          class="order-form__input"
+          type="number"
+          placeholder="Quantity"
+          min="1"
+          max="20"
+          title="Choose amount up to 20"
+        />
+        <div class="dropdown__icon-wrap arrow-amount--pos">
+          <svg class="dropdown__icon" width="18" height="13">
+            <use class="" href="./images/icons.svg#icon-down-arrow"></use>
+          </svg>
+        </div>
+        <select
+          class="order-form__input order-form__dropdown"
+          name="payment"
+          required
+        >
+          <option class="dropdown__item" value="">Payment</option>
+          <option class="dropdown__item" value="mastercard">Mastercard</option>
+          <option class="dropdown__item" value="pay-pal">PayPal</option>
+        </select>
+        <div class="dropdown__icon-wrap arrow-payment--pos">
+          <svg class="dropdown__icon" width="18" height="13">
+            <use class="" href="./images/icons.svg#icon-down-arrow"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="order-form__comment--pos">
+        <label class="order-form__comment-label" for="order-comment">
+          Leave your message</label
+        >
+        <textarea
+          class="order-form__comment"
+          name="take-order-comment"
+          id="order-comment"
+          rows="10"
+        ></textarea>
+      </div>
+    </div>
+    <div class="order-form__btn-container">
+      <button
+        class="order-form__btn order-form__btn-sale js-open-modal"
+        type="button"
+        name="to-sale"
+      >
+        <span class="btn-sale-text">By it now</span>
+      </button>
+      <button
+        class="order-form__btn order-form__btn-cart"
+        type="button"
+        name="to-cart"
+      >
+        <span class="btn-cart-text">Add to cart</span>
+      </button>
+    </div>
+  </form>
+  <!-- <div class="modal-deck"> -->
+  <!-- <div class="order-form-modal1 js-overlay-modal">
+    <svg class="dropdown__icon js-modal-close" width="18" height="13">
+      <use class="order-form-modal1__icon-close" href="./images/icons.svg#icon-cross-close"></use>
+    </svg>
+    <h2 class="order-form-modal1__title">
+      Excellent choice! Let's move on to the checkout!
+    </h2>
+    <button class="order-form-modal1__btn" type="submit" id="modal-sale">
+      Let's go!
+    </button>
+  </div> -->
+
+  <!-- <div class="order-form-modal2 js-overlay-modal">
+    <svg class="dropdown__icon js-modal-close" width="18" height="13">
+      <use class="" href="./images/icons.svg#icon-cross-close"></use>
+    </svg>
+    <h2 class="order-form-modal2__title">
+      Thank you for your order! We will contact you soon!
+    </h2>
+    <button class="order-form-modal2__btn" type="submit" id="modal-sale">
+      KEEP SHOPPING
+    </button>
+  </div> -->
+  <!-- </div> -->
+</div>
