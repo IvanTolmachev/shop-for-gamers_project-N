@@ -28,9 +28,14 @@
   }
   @include desktop {
     margin-right: 118px;
+    max-height: 56px;
   }
 
   color: $secondaryTextColor;
+  &:hover,
+  &:focus {
+    box-shadow: $boxShadow;
+  }
 }
 
 .main-nav-link {
@@ -39,6 +44,11 @@
   line-height: 100%; //??
 
   color: $secondaryTextColor;
+  transition: color $durationFunction $timingFunction;
+  &:hover,
+  &:focus {
+    color: $curlineBottomColor;
+  }
 }
 
 .main-nav-item:not(:last-child) {
@@ -91,6 +101,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: currentColor;
+  transition: fill $durationFunction $timingFunction;
+  &:hover,
+  &:focus {
+    fill: $curlineBottomColor;
+  }
 }
 .footer-text {
   font-weight: 400;
