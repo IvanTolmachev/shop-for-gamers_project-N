@@ -2,12 +2,12 @@
 @import './variables';
 @import './base';
 @import './common';
-// @import './visuallyHiden';
-// @import './mixins/mixins';
+@import './visuallyHiden';
+@import './mixins/mixins';
 // @import './modal';
 // @import './container';
-// @import './section';
-// @import './header';
+@import './section';
+@import './header';
 // @import './hero';
 // @import './gallery';
 // @import './sale';
@@ -17,4 +17,4 @@
 // @import './contacts-page';
 // @import './blog-page';
 // @import './blog-article-page';
-// @import './footer';
+@import './footer';
