@@ -1,4 +1,5 @@
 .overlay {
+  
   opacity: 0;
   visibility: hidden;
   position: fixed;
@@ -7,40 +8,41 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 20, 20, 0.8);
-  z-index: 20;
+  z-index: 5;
+  overflow-y: scroll;
   transition: all 500ms linear;
+  @media screen and (max-width:479px) {
+    padding: 200px 24px;
+  }
+ 
 }
 
   
 .modal {
-  position: fixed;
-  display: inline-block;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 30;
+  
+  @media screen and (min-width:480px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+ 
+  z-index: 6;
   opacity: 0;
   visibility: hidden;
-
   width: 100%;
   max-width: 480px;
- 
-  padding: 100px 0;
-
-  
-
+  padding: 100px 30px;
   text-align: center;
-
   background-color: $primaryBgColor;
-
   transition: all 0.5ms linear;
   @include tablet-only {
-    max-width: 688px;
-    padding: 88px 0;
+  max-width: 688px;
+  padding: 88px 25px;
   }
   @include desktop {
-    max-width: 768px;
-    padding: 88px 0;
+  max-width: 768px;
+  padding: 88px 80px;
   }
 }
 
@@ -49,14 +51,24 @@
   opacity: 1;
   visibility: visible;
 }
+
+.button-modal-wrap{
+  @media screen and (max-width:479px) {
+    position: relative;
+  }
+  
+}
 .modal-cross-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 40px;
   height: 40px;
-  top: 20px;
-  right: 20px;
+  
   @include tablet {
     width: 31.25px;
     height: 31.25px;
@@ -64,7 +76,7 @@
     right: 24.38px;
   }
 
-  position: absolute;
+  
 
   border: 1.5px solid $btnBgColor;
   border-radius: 50%;
@@ -105,9 +117,9 @@
   border-radius: 16px;
   text-transform: uppercase;
   @include tablet {
-    font-size: 32px;
-    line-height: 1.19;
-    min-width: 306px;
+  font-size: 32px;
+  line-height: 1.19;
+  min-width: 306px;
   }
   transition: box-shadow 300ms ease-in-out;
   &:hover,&:focus{
@@ -115,13 +127,14 @@
     
   }
 }
+
 .modal-title-choice {
-  padding: 0 44px;
   margin-bottom: 32px;
   font-weight: 600;
   font-size: 24px;
   line-height: calc(28 / 24);
   color: $secondaryTextColor;
+  
   @include tablet-only {
     margin-bottom: 56px;
     font-size: 56px;
@@ -135,7 +148,6 @@
 }
 
 .modal-title-order {
-  padding: 0 37px;
   margin-bottom: 20px;
   font-weight: 600;
   font-size: 24px;
@@ -154,23 +166,33 @@
 }
 
 .modal-title-ok {
-  padding: 0 37px;
   margin-bottom: 32px;
   font-weight: 600;
   font-size: 24px;
   line-height: calc(28 / 24);
   color: $secondaryTextColor;
+  animation:fade 400ms ease-in-out forwards;
   @include tablet-only {
-    margin-bottom: 80px;
+    margin-bottom: 56px;
     font-size: 56px;
     line-height: calc(66 / 56);
   }
   @include desktop {
-    margin-bottom: 80px;
+    margin-bottom: 56px;
     font-size: 64px;
     line-height: calc(75 / 64);
+
   }
 }
+
+
+
+
+
+
+
+
+
 .links-modal {
   display: inline-block;
   padding: 16px 0;
