@@ -1,0 +1,52 @@
+$primaryTextColor: #86e543; //* основний текст - в картках, кнопки" */
+$secondaryTextColor: #ffffff; //*  просто білий колір. Більшість тексту і деякі елементи (соціалки, кнопки)   */
+$textareaTextColor: #cdcdcd; //* Колір тексту у баготострочних інпутах */
+// $socialLinkColor: #ffffff;  //* */
+$shopNowButton: #000000; //* Текст на кнопці  "shop-now" */
+$secondTextColor: #8d9289; //* Текст в контактах, ціна без знижки, дата оновлення */
+$linkTextColor: #8d9289; //* Текст в контактах, ціна без знижки, дата оновлення */
+$primaryBgColor: #01383a; //* Колір бекграуду хедера, модалок, оверлей карток */
+
+$footerBgColor: #001414; //* Колір бекграуду футера, 80% оверлей під модалкою */
+$mobileBgColor: #001414; //* Колір бекграуду мобільного меню */
+$dropdownBgColor: #17573d; //* Колір бекграуду випадних списків */
+
+$btnBgColor: #86e543; //* Основний колір кнопок */
+$curlineBottomColor: #28780d; //* Колір нижньої лінії під заголовками */
+$curlineTopColor: #7be34a; //* Колір верхньої лінії під заголовками */
+
+$hoverColor: #86e543;
+
+$boxShadow: 0px 8px 20px rgba(134, 229, 67, 0.5),
+  0px 4px 10px rgba(255, 255, 255, 0.1);
+
+//* ===== Градієнти ===== */
+
+$gradBn1Text: linear-gradient(
+  270deg,
+  #1edde0 13.26%,
+  #8bda41 51.01%,
+  #ef001b 107.89%
+); //* градієнт тексту на 1 слайді банера */
+
+$gradBn2Text: linear-gradient(
+  270deg,
+  #03fe8f 4.61%,
+  #ebdcff 57.91%,
+  #ff98f3 92.2%
+); //* градієнт тексту на 2 слайді банера */
+
+$gradBn3Text: linear-gradient(
+  270deg,
+  #ffffff 13.26%,
+  #693cf9 60.87%,
+  #f475eb 107.89%
+); //* градієнт тексту на 3 слайді банера */
+
+$primaryBorderRadius: 16px;
+$primaryFontSize: 22px;
+$mainFont: 'Roboto-medium', sans-serif;
+
+//* Анімація */
+$durationFunction: 250ms;
+$timingFunction: cubic-bezier(0.4, 0, 0.2, 1);

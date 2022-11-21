@@ -1,0 +1,118 @@
+.footer {
+  background-color: $footerBgColor;
+  padding-top: 25px;
+  padding-left: 16px;
+  padding-bottom: 24px;
+  padding-right: 32px;
+  @include tablet {
+    padding: 40px;
+  }
+}
+.page-footer {
+  @include tablet {
+    display: flex;
+  }
+}
+.logo-footer {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+  text-align: center;
+  @include mobile {
+    margin-bottom: 25px;
+  }
+  @include tablet {
+    margin-right: 61px;
+  }
+  @include desktop {
+    margin-right: 118px;
+  }
+
+  color: $secondaryTextColor;
+}
+
+.main-nav-link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%; //??
+
+  color: $secondaryTextColor;
+}
+
+.main-nav-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.footer-wrap {
+  display: flex;
+  @include mobile-only {
+    margin-top: 25px;
+    margin-bottom: 24px;
+  }
+}
+
+.main-menu {
+  @include tablet {
+    margin-right: 89px;
+  }
+  @include desktop {
+    margin-right: 217px;
+  }
+}
+
+.footer-soc-list {
+  margin-left: auto;
+  @include tablet-only {
+    margin-right: 73px;
+    display: flex;
+  }
+  @include desktop {
+    margin-right: 281px;
+  }
+}
+.footer-soc-item:not(:last-child) {
+  @include mobile-only {
+    margin-bottom: 32px;
+  }
+  @include tablet {
+    margin-right: 16px;
+  }
+  @include desktop {
+    margin-bottom: 16px;
+  }
+}
+.footer-soc-link {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: $secondaryTextColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.17;
+  margin-bottom: 8px;
+  color: $secondaryTextColor;
+}
+.footer-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+.footer-link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.17;
+
+  text-transform: capitalize;
+
+  color: $secondTextColor;
+}
+.footer-text-phone {
+  margin-top: 16px;
+}
+
+.footer-link {
+  letter-spacing: 0.01em;
+}

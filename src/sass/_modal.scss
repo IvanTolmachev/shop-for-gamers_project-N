@@ -1,0 +1,189 @@
+.overlay {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 20, 20, 0.8);
+  z-index: 20;
+  transition: all 500ms linear;
+}
+
+  
+.modal {
+  position: fixed;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+  opacity: 0;
+  visibility: hidden;
+
+  width: 100%;
+  max-width: 480px;
+ 
+  padding: 100px 0;
+
+  
+
+  text-align: center;
+
+  background-color: $primaryBgColor;
+
+  transition: all 0.5ms linear;
+  @include tablet-only {
+    max-width: 688px;
+    padding: 88px 0;
+  }
+  @include desktop {
+    max-width: 768px;
+    padding: 88px 0;
+  }
+}
+
+.modal.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.modal-cross-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  top: 20px;
+  right: 20px;
+  @include tablet {
+    width: 31.25px;
+    height: 31.25px;
+    top: 24.38px;
+    right: 24.38px;
+  }
+
+  position: absolute;
+
+  border: 1.5px solid $btnBgColor;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: all 250ms linear;
+  &:hover,
+  &:focus {
+    border: 1.5px dashed $btnBgColor;
+    transform: rotate(-200deg) scale(1.1);
+  }
+}
+
+.modal-cross-btn:hover .modal-cross {
+  transform: rotate(400deg);
+}
+
+.modal-cross {
+  width: 14.4px;
+  height: 14.4px;
+  @include tablet {
+    width: 11.25px;
+    height: 11.25px;
+  }
+  transition: all 250ms linear;
+}
+
+.modal-btn {
+  min-width: 173px;
+  padding: 16px 0;
+  display: inline-block;
+  background-color: $btnBgColor;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(19 / 16);
+
+  color: $primaryBgColor;
+  border-radius: 16px;
+  text-transform: uppercase;
+  @include tablet {
+    font-size: 32px;
+    line-height: 1.19;
+    min-width: 306px;
+  }
+  transition: box-shadow 300ms ease-in-out;
+  &:hover,&:focus{
+    box-shadow: 0px 8px 20px rgba(134, 229, 67, 0.5), 0px 4px 10px rgba(255, 255, 255, 0.1);
+    
+  }
+}
+.modal-title-choice {
+  padding: 0 44px;
+  margin-bottom: 32px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: calc(28 / 24);
+  color: $secondaryTextColor;
+  @include tablet-only {
+    margin-bottom: 56px;
+    font-size: 56px;
+    line-height: calc(66 / 56);
+  }
+  @include desktop {
+    margin-bottom: 56px;
+    font-size: 64px;
+    line-height: calc(75 / 64);
+  }
+}
+
+.modal-title-order {
+  padding: 0 37px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: calc(28 / 24);
+  color: $secondaryTextColor;
+  @include tablet-only {
+    margin-bottom: 56px;
+    font-size: 56px;
+    line-height: calc(66 / 56);
+  }
+  @include desktop {
+    margin-bottom: 56px;
+    font-size: 64px;
+    line-height: calc(75 / 64);
+  }
+}
+
+.modal-title-ok {
+  padding: 0 37px;
+  margin-bottom: 32px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: calc(28 / 24);
+  color: $secondaryTextColor;
+  @include tablet-only {
+    margin-bottom: 80px;
+    font-size: 56px;
+    line-height: calc(66 / 56);
+  }
+  @include desktop {
+    margin-bottom: 80px;
+    font-size: 64px;
+    line-height: calc(75 / 64);
+  }
+}
+.links-modal {
+  display: inline-block;
+  padding: 16px 0;
+  text-align: center;
+  background-color: $btnBgColor;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(19 / 16);
+
+  color: $primaryBgColor;
+  border-radius: 16px;
+  text-transform: uppercase;
+  min-width: 200px;
+  margin: 15px;
+}
