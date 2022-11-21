@@ -1,0 +1,53 @@
+// -------------- Миксин для адаптивки -------------
+@mixin desktop {
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin mobile-only {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+// вызов mixin-a
+// .any-class {
+//   @include phones {
+//     background-color: red;
+//   }
+// }
+
+// --------------------- Миксин для анимации -----------------
+
+@mixin transition($property) {
+  transition: $property 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+// ---------------------- Миксин на grid, для распределения кол. карточек ------------------------
+
+@mixin grid($gap, $count) {
+  display: grid;
+  gap: $gap;
+  grid-template-columns: repeat(
+    ($count, calc((100% - ($count - 1) * $gap) / $count))
+  );
+}
