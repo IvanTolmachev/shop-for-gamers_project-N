@@ -18,19 +18,15 @@
 }
 
   
-.modal {
-  
-  @media screen and (min-width:480px) {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
- 
+.modal { 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 6;
   opacity: 0;
   visibility: hidden;
-  width: 100%;
+  width: 90vw;
   max-width: 480px;
   padding: 100px 30px;
   text-align: center;
@@ -52,12 +48,8 @@
   visibility: visible;
 }
 
-.button-modal-wrap{
-  @media screen and (max-width:479px) {
-    position: relative;
-  }
-  
-}
+
+
 .modal-cross-btn {
   position: absolute;
   top: 20px;
