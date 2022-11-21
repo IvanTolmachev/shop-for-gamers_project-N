@@ -32,9 +32,10 @@
   }
 
   color: $secondaryTextColor;
+  transition: text-shadow $durationFunction $timingFunction;
   &:hover,
   &:focus {
-    box-shadow: $boxShadow;
+    text-shadow: $boxShadow;
   }
 }
 
@@ -126,6 +127,11 @@
   text-transform: capitalize;
 
   color: $secondTextColor;
+  transition: color $durationFunction $timingFunction;
+  &:hover,
+  &:focus {
+    color: $curlineBottomColor;
+  }
 }
 .footer-text-phone {
   margin-top: 16px;
