@@ -1,12 +1,12 @@
 .blog-article {
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 40px;
-  padding-bottom: 48px;
+  padding: 40px 16px 48px 16px;
 
   @media screen and (min-width: 768px) {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 120px 40px 120px 40px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 112px;
   }
 }
 
@@ -14,7 +14,7 @@
   font-weight: 600;
   font-size: 24px;
   line-height: 1.17;
-  color: #ffffff;
+  color: $secondaryTextColor;
   margin-bottom: 16px;
 
   @media screen and (min-width: 768px) {
@@ -85,7 +85,6 @@ $lineShink: 4px;
   margin-left: $lineShink;
   border-top: 1px solid $curlineBottomColor;
   border-left: 1px solid $curlineBottomColor;
-  // box-shadow: 0px 4px 25px rgba(40, 120, 13, 0.25);
   background-color: inherit;
 
   @media screen and (min-width: 768px) {
@@ -96,7 +95,6 @@ $lineShink: 4px;
 }
 
 .title__left {
-  // min-width: 280px;
   margin-left: calc(((100% - 320px) / 2) + 121px);
 
   @media screen and (min-width: 480px) {
@@ -127,10 +125,6 @@ $lineShink: 4px;
     border-radius: 12px;
     margin-bottom: 0;
   }
-  @media screen and (min-width: 1200px) {
-    border-radius: 12px;
-    margin-bottom: 0;
-  }
 }
 
 .img-content {
@@ -141,7 +135,6 @@ $lineShink: 4px;
     margin-bottom: 16px;
   }
   @media screen and (min-width: 1280px) {
-    display: flex;
     justify-content: space-between;
     margin-bottom: 48px;
   }
@@ -183,13 +176,12 @@ $lineShink: 4px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1;
-  color: #ffffff;
+  color: $secondaryTextColor;
   margin-bottom: 8px;
 
   @media screen and (min-width: 768px) {
     font-size: 24px;
-    line-height: 1;
-    color: #86e543;
+    color: $btnBgColor;
     margin-bottom: 32px;
   }
 }
@@ -198,22 +190,20 @@ $lineShink: 4px;
   font-weight: 600;
   font-size: 16px;
   line-height: 1;
-  color: #8d9289;
+  color: $secondTextColor;
   margin-bottom: 8px;
 
   @media screen and (min-width: 768px) {
     font-size: 24px;
-    line-height: 1;
     margin-bottom: 0;
   }
 }
 
-.blog-article-text {
+.comm-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
-  color: #ffffff;
-  margin-bottom: 16px;
+  color: $secondaryTextColor;
 
   @media screen and (min-width: 1280px) {
     font-size: 24px;
@@ -221,40 +211,26 @@ $lineShink: 4px;
   }
 }
 
+.blog-article-text:not(:last-child) {
+  margin-bottom: 16px;
+}
+
 .blog-article-subject {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.19;
-  color: #ffffff;
-
   @media screen and (min-width: 768px) {
-    color: #86e543;
-  }
-
-  @media screen and (min-width: 1280px) {
-    font-size: 24px;
-    line-height: 1.17;
+    color: $primaryTextColor;
   }
 }
 
 .blog-article-list-sub {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.19;
-  color: #ffffff;
   text-indent: 5px;
-  @media screen and (min-width: 768px) {
-    color: #86e543;
-  }
 
-  @media screen and (min-width: 1280px) {
-    font-size: 24px;
-    line-height: 1.17;
+  @media screen and (min-width: 768px) {
+    color: $primaryTextColor;
   }
 }
 
 .blog-article-list {
-  color: #ffffff;
+  color: $secondaryTextColor;
   padding: 0;
   margin: 0 0 16px 25px;
 
@@ -264,18 +240,9 @@ $lineShink: 4px;
 }
 
 .blog-article-item {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.19;
   list-style: decimal;
-  color: #ffffff;
 
   @media screen and (min-width: 768px) {
-    color: #86e543;
-  }
-
-  @media screen and (min-width: 1280px) {
-    font-size: 24px;
-    line-height: 1.17;
+    color: $primaryTextColor;
   }
 }
