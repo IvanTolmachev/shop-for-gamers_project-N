@@ -213,7 +213,7 @@
 }
 
 .menu {
-  background-color: black;
+  background-color: $mobileBgColor;
   flex-direction: column;
   align-items: center;
   pointer-events: none;
@@ -231,7 +231,7 @@
   transition: opacity 400ms linear, transform 700ms ease-in-out;
 
   &.is-open {
-    background-image: url('../images/mobile-menu/bg-m1x.png');
+    
     position: absolute;
     z-index: 5;
     width: 100vw;
@@ -242,9 +242,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: inset 0 13px 20px rgb(134 229 67 / 50%),
-      0 4px 10px rgb(255 255 255 / 10%);
     transition: opacity 400ms linear, transform 500ms ease-in-out;
+    overflow: scroll;
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: 100vw, 100vh;
+    background-image: url('../images/mobile-menu/bg-m1x.png');
+    @media screen and (min-width:320px){
+      @include retina {
+        background-image: url('../images/mobile-menu/bg-m2x.png')
+      } 
+    }
+    @include tablet { background-image:
+      url('../images/mobile-menu/bg-t1x.png');
+      @include retina {
+        background-image:  url('../images/mobile-menu/bg-t2x.png')
+      }
+    }
   }
 }
 
