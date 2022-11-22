@@ -242,7 +242,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    box-shadow: inset 0 13px 20px rgb(134 229 67 / 50%),
+      0 4px 10px rgb(255 255 255 / 10%);
     transition: opacity 400ms linear, transform 500ms ease-in-out;
   }
 }
