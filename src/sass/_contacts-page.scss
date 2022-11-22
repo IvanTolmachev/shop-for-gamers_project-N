@@ -1,31 +1,31 @@
 .contacts-bgr {
     padding: 0;
 
-        background-size: cover;
+        background-size: fixed;
         background-attachment: scroll;
         background-repeat: no-repeat;
         background-position: center;
 
-        // //Mobile background
-        // background-image: url(../images/contacts/mobil-bgr.jpg);
-        // // max-width: 450px;
+        //Mobile background
+        background-image: url(../images/contacts/mobil-bgr.jpg);
+        // max-width: 450px;
 
-        // //Tablet background
-        // @media screen and (min-width: 768px) {
-        //     background-image: url(../images/contacts/tablet-bgr.jpg);
-        //     // max-width: 1199px;
-        // }     
+        //Tablet background
+        @media screen and (min-width: 768px) {
+            background-image: url(../images/contacts/tablet-bgr.jpg);
+            // max-width: 1199px;
+        }     
 
-        // //Desktop background
-        // @media screen and (min-width: 1280px) {
-        //     background-image: url(../images/contacts/desktop-bgr.jpg);
-        //     // width: 1280px;
-        // }
+        //Desktop background
+        @media screen and (min-width: 1280px) {
+            background-image: url(../images/contacts/desktop-bgr.jpg);
+            // width: 1280px;
+        }
 
-        border-top: 
-            0px shadow 0px 4px 4px rgba(17, 168, 26, 0.2),
-            0px 4px 50px rgba(94, 236, 54, 0.5),
-            0px 4px 10px rgba(97, 162, 58, 0.2);
+        // border-top: 
+        //     0px shadow 0px 4px 4px rgba(17, 168, 26, 0.2),
+        //     0px 4px 50px rgba(94, 236, 54, 0.5),
+        //     0px 4px 10px rgba(97, 162, 58, 0.2);
 }
 
 .contacts-page {
@@ -136,7 +136,8 @@
     padding-top: 16px;
 
     @media screen and (min-width: 768px) {
-        padding-top: 32px;
+        // padding-top: 32px;
+        padding-top: 50px;
     }
 
         @media screen and (min-width: 1280px) {
@@ -191,13 +192,14 @@
 }
 
 .contacts__info-box {
-    margin-bottom: 24px;
+    margin-bottom: 40px;
     display: flex;
     flex-direction: column;
     gap: 8px;
 
     @media screen and (min-width: 768px) {
         margin-bottom: 50px;
+        // margin-bottom: 0;
     }
 }
 
@@ -210,12 +212,13 @@
 
     @media screen and (min-width: 1280px) {
         flex-direction: column;
-        gap: 40px;
+        gap: 0px;
     }
 }
 
 .contacts__order-info {
     margin-bottom: 24px;
+    gap: 8px;
 
     @media screen and (min-width: 768px) {
         margin-bottom: 32px;
@@ -325,6 +328,10 @@
     min-width: 289px;
     // max-width: 591px;
     color: $secondaryTextColor;
+    //* Анімація */
+        transition-property: border-bottom;
+        transition-duration: $durationFunction;
+        transition-timing-function: $timingFunction;
 
     &:focus {
         border-bottom: 1px solid $curlineBottomColor;
@@ -333,10 +340,6 @@
 
     &::placeholder {
         color: $primaryBgColor;
-        //* Анімація */
-            transition-property: border-bottom;
-            transition-duration: $durationFunction;
-            transition-timing-function: $timingFunction;
     }
 }
 
@@ -406,6 +409,15 @@
     margin: 0 auto;
     display: block;
     cursor: pointer;
+    //* Анімація */
+        transition-property: border-color;
+        transition-duration: $durationFunction;
+        transition-timing-function: $timingFunction;
+
+    &:hover,
+    &:focus {
+        border-color: $btnBgColor;
+    }
         
     @media screen and (min-width: 768px) {
         height: 70px;
@@ -416,8 +428,7 @@
         height: 70px;
         width: 306px;
         margin: 0;
-    }
-        
+    }   
 }
 
 .call-back-button-text {
@@ -427,4 +438,18 @@
     line-height: calc(19/16);
     letter-spacing: 0em;
     color: $secondaryTextColor;
+    //* Анімація */
+        transition-property: color;
+        transition-duration: $durationFunction;
+        transition-timing-function: $timingFunction;
+    
+    @media screen and (min-width: 768px) {
+        font-size: 32px;
+    }
+
+    .call-back-button:hover &,
+    .call-back-button:focus & {
+        color: $btnBgColor;
+    }
+
 }
