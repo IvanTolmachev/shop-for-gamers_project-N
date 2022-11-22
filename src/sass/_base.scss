@@ -4,6 +4,10 @@ body {
   font-weight: 600;
   background-color: $primaryBgColor;
   color: $primaryTextColor;
+  padding-top: 104px;
+ @media screen and (min-width:768px) {
+  padding-top: 136px;
+ }
 }
 
 h1,
