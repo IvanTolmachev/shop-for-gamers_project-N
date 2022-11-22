@@ -4,9 +4,7 @@
 .page-footer {
   padding-top: 25px;
   padding-bottom: 24px;
-  // @include tablet {
-
-  // }
+  background-color: $footerBgColor;
   @include tablet {
     display: flex;
     padding: 40px;
