@@ -21,6 +21,14 @@
 
 .sale-section-title {
   margin-bottom: 43px;
+  font-size: 24px;
+  line-height: 1.17;
+  color: $secondaryTextColor;
+  @include tablet {
+    font-size: 56px;
+    line-height: 1.18;
+  }
+
 }
 
 .sale-list {
