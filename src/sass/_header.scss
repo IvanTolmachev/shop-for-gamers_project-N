@@ -231,6 +231,7 @@
   transition: opacity 400ms linear, transform 700ms ease-in-out;
 
   &.is-open {
+    background-image: url('../images/mobile-menu/bg-m1x.png');
     position: absolute;
     z-index: 5;
     width: 100vw;
