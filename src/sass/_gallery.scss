@@ -1,5 +1,13 @@
+.gallery-container{
+  padding-bottom: 88px;
+  @include tablet {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
 .swiper {
   min-width: 320px;
+  margin: 0 auto;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
@@ -35,11 +43,9 @@
   position: relative;
 }
 
-.gallery-img {
-  @include desktop {
+.gallery-img {   
     border-top: solid 2px $primaryTextColor;
     border-bottom: solid 2px $primaryTextColor;
-  }
 }
 
 .gallery-text_des-1 {
