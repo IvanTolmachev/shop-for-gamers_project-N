@@ -1,10 +1,10 @@
-.gallery-container{
-  padding-bottom: 88px;
-  @include tablet {
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
-}
+// .gallery-container{
+//   padding-bottom: 88px;
+//   @include tablet {
+//     padding-top: 120px;
+//     padding-bottom: 120px;
+//   }
+// }
 .swiper {
   min-width: 320px;
   margin: 0 auto;
@@ -43,9 +43,9 @@
   position: relative;
 }
 
-.gallery-img {   
-    border-top: solid 2px $primaryTextColor;
-    border-bottom: solid 2px $primaryTextColor;
+.gallery-img {
+  border-top: solid 2px $primaryTextColor;
+  border-bottom: solid 2px $primaryTextColor;
 }
 
 .gallery-text_des-1 {
