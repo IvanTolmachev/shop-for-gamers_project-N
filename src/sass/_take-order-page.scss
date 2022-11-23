@@ -19,7 +19,11 @@
             column-gap: 121px;
         }
     }
+    &-photo{
+        border-radius: 4px;
+    }
     &-main{
+        border-radius: 12px;
         grid-column: 1;
         grid-row: 2;
         @media screen and (min-width:1280px) {
