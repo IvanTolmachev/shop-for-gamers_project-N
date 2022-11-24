@@ -1,4 +1,5 @@
 .sale {
+  position: relative;
   padding: 0 18px 48px 18px;
 
   @media screen and (min-width: 768px) {
@@ -10,6 +11,11 @@
   }
 }
 
+.anchor {
+  top: -272px;
+  position: absolute;
+  display: block;
+}
 
 .sale-list {
   display: flex;
@@ -25,9 +31,7 @@
   @include desktop {
     gap: 20px;
   }
-
 }
-
 
 .sale-item {
   width: 100%;
@@ -35,24 +39,23 @@
 
   // }
   @include tablet {
-    width: calc((100% - 38px)/2);
+    width: calc((100% - 38px) / 2);
   }
 
   @include desktop {
-    width: calc((100% - 60px)/4);
+    width: calc((100% - 60px) / 4);
   }
 
   // outline: 1px solid tomato;
 }
 
-.sale-item:nth-child(n+5) {
+.sale-item:nth-child(n + 5) {
   display: none;
 
   @include tablet {
     display: block;
   }
 }
-
 
 .sale-img {
   width: 100%;
@@ -120,7 +123,8 @@
 
   &:hover,
   &:focus {
-    box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.5), 0px 4px 10px rgba(134, 229, 67, 0.1);
+    box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.5),
+      0px 4px 10px rgba(134, 229, 67, 0.1);
   }
 }
 
@@ -165,7 +169,6 @@
 //     margin-right: -$lineShink;
 //   }
 
-
 // }
 
 // .title__b3 {
@@ -200,22 +203,17 @@
 // }
 
 .title-left {
-
   margin-left: calc(((100% - 320px) / 2) + 80px);
 
-
   @media screen and (min-width: 480px) {
-
     margin-left: calc(((100% - 480px) / 2) + 102px);
   }
 
   @media screen and (min-width: 768px) {
-
     margin-left: calc(((100% - 768px) / 2) + 142px);
   }
 
   @media screen and (min-width: 1280px) {
-
     margin-left: calc(((100% - 1280px) / 2) + 142px);
   }
 }
@@ -243,7 +241,6 @@
     line-height: 1.18;
     margin-right: 72px;
   }
-
 }
 
 // .title__name {
