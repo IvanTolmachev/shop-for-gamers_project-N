@@ -1,109 +1,141 @@
-.hero{
-    max-width: 1280px;
-   
-    margin: 0 auto;
-    padding: 180px 0;
-    background-color:transparent;
-    background-image: url(../images/hero/Fon_hero.png),
-    url(../images/hero/Framemob.png);
-    // url(../images/hero/mousemob.png),
-    // url(../images/hero/headphonesmob.png),
-    // url(../images/hero/keyboardmob.png);
-    
-    background-size: cover, 304px 472px; 
-    // 60px 99px, 150px 186px, 88px 42px;
-    background-repeat: no-repeat;
-    background-position: left -350px top -50px, top 0 right 0;
-    // top 57px left 16px,  top 0px right 0px, top 394px right 150px;
-//    background-position-x: 70%;
+.hero {
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-top: -104px;
+  background-image: url(../images/hero/Framemob.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+ 
+  @media screen and (max-width: 768px) {
+    margin-top: -104px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-top: -136px;
+    background-image: url(../images/hero/Frametab.png);
+  }
+  @media screen and (min-width: 1279px) {
+    background-image: url(../images/hero/Framedesk.png);
+  }
+}
 
-    @media screen and (min-width: 480px) {
-        width: 480px;
-    }
+.hero-bg {
+  background-image: url(../images/hero/Fon_hero.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
+  @media screen and (max-width: 767px) {
+    background-position: -250px;
+  }
+  @media screen and (min-width: 768px) {
+    background-size: contain;
+    background-image: url(../images/hero/Fon_herotab.png);
+  }
+  @media screen and (min-width: 1280px) {
+    width: 1280px;
+    background-image: url(../images/hero/Fon_herodesk.png);
+  }
+}
+.hero-container {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 601px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+
+  background-position: top 104px left 16px;
+
+  @media screen and (max-width: 767px) {
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 860px;
+  }
+}
+
+.hero-box {
+    margin-top: 180px;
     @media screen and (min-width: 768px) {
-        width: 768px;
-       
-        padding: 154px 0;
-        background-image: url(../images/hero/Fon_hero.png),
-        url(../images/hero/Frametab.png);
-    // url(../images/hero/mousetab.png),
-    // url(../images/hero/keyboardtab.png),
-    // url(../images/hero/headphonestab.png);
-        background-size: cover, 379px 616px;
-        // 100px 165px, 143px 69px, 180px 223px;
-        background-position: left -160px top -55px, top 33px right 0;
-        // top 49px right 166px, top 469px right 189px, top 226px right 20px ;
+        margin-top: 66px;
     }
+  @media screen and (min-width: 1280px) {
+    margin-top: 130px;
+    margin-left: 126px;
+  }
 
-    @media screen and (min-width: 1280px) {
-        width: 1280px;
-        height: 724px;
-        background-image: url(../images/hero/Fon_hero.png), 
-        url(../images/hero/Framedesk.png);
-    // url(../images/hero/mousedesk.png),
-    // url(../images/hero/keyboarddesk.png),
-    // url(../images/hero/headphonesdesk.png);
-        background-size: cover, 668px 652px;
-        // , 133px 220px, 230px 111px, 270px 335px;
-        background-position: top -140px left 0, right 78px top 0px;
-        //  top 69px right 459px, bottom 83px right 447px, top 155px right 91px;
-    }
 }
-.hero-text{
-    text-align: center;
-    margin: 0 auto 25px;
-    font-size: 32px;
-line-height: 1.19;
-color: #FFFFFF;
-    max-width: 247px;
+.hero-text {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 32px;
+  line-height: 1.19;
+  color: $secondaryTextColor;
+  max-width: 247px;
   
-@media screen and (min-width: 768px) {
+  & span {
+    white-space: nowrap;
+  }
+
+//   @media screen and (max-width: 767px) {
+//    margin: auto;
+//   }
+  @media screen and (min-width: 768px) {
     text-align: left;
-    margin:0 0 94px 40px ;
-max-width: 388px;
-font-size: 56px;
-line-height: 1.18;
+    margin-bottom: 0;
+ 
+    max-width: 388px;
+    font-size: 56px;
+    line-height: 1.18;
+    & span {
+      white-space: normal;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+   
+    max-width: 515px;
+    font-size: 64px;
+    line-height: 1.18;
+  }
 }
-@media screen and (min-width: 1280px) {
-    
-    margin-bottom: 25px;
-    margin-left: 100px;
+
+.hero-btn {
+display: flex;
+max-width: 173px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.19;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: $primaryBgColor;
+  background-color: $btnBgColor;
+  border-radius: 16px;
+  padding: 16px 20px;
+ 
+
+  @media screen and (max-width: 767px) {
+    margin: auto;
+  }
+
+  @media screen and (min-width: 768px) {
   
-max-width: 515px;
-font-size: 64px;
-line-height: 1.18;
-}}
-
-.hero-btn{
- margin-left: auto;
-margin-right: auto;
-
-font-weight: 700;
-font-size: 16px;
-line-height: 1.19;
-text-transform: uppercase;
-cursor: pointer;
-color: #01383A;
-background-color: #86E543;
-border-radius: 16px;
-padding: 16px 20px;
-
-@media screen and (min-width: 768px){
-   margin: 0 0 0 40px;
-font-size: 32px;
-line-height: 1.19;
-
+    font-size: 32px;
+    line-height: 1.19;
+    margin-top: 94px;
+    max-width: 306px;
+  }
+  @media screen and (min-width: 1280px) {
+   
+    margin-top: 40px;
+  }
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: $btnBgColor;
+    box-shadow: $boxShadow;
+  }
 }
-@media screen and (min-width: 1280px){
-    margin:0 100px;
-}
-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-&:hover,
-&:focus {
-    background-color: #86E543;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
-}
-

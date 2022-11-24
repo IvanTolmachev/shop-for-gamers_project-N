@@ -1,5 +1,4 @@
 .overlay {
-  
   opacity: 0;
   visibility: hidden;
   position: fixed;
@@ -8,22 +7,20 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 20, 20, 0.8);
-  z-index: 5;
+  z-index: 105;
   overflow-y: scroll;
   transition: all 500ms linear;
-  @media screen and (max-width:479px) {
+  @media screen and (max-width: 479px) {
     padding: 200px 24px;
   }
- 
 }
 
-  
-.modal { 
+.modal {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 6;
+  z-index: 110;
   opacity: 0;
   visibility: hidden;
   width: 90vw;
@@ -33,12 +30,12 @@
   background-color: $primaryBgColor;
   transition: all 0.5ms linear;
   @include tablet-only {
-  max-width: 688px;
-  padding: 88px 25px;
+    max-width: 688px;
+    padding: 88px 25px;
   }
   @include desktop {
-  max-width: 768px;
-  padding: 88px 80px;
+    max-width: 768px;
+    padding: 88px 80px;
   }
 }
 
@@ -47,8 +44,6 @@
   opacity: 1;
   visibility: visible;
 }
-
-
 
 .modal-cross-btn {
   position: absolute;
@@ -60,15 +55,13 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  
+
   @include tablet {
     width: 31.25px;
     height: 31.25px;
     top: 24.38px;
     right: 24.38px;
   }
-
-  
 
   border: 1.5px solid $btnBgColor;
   border-radius: 50%;
@@ -109,14 +102,15 @@
   border-radius: 16px;
   text-transform: uppercase;
   @include tablet {
-  font-size: 32px;
-  line-height: 1.19;
-  min-width: 306px;
+    font-size: 32px;
+    line-height: 1.19;
+    min-width: 306px;
   }
   transition: box-shadow 300ms ease-in-out;
-  &:hover,&:focus{
-    box-shadow: 0px 8px 20px rgba(134, 229, 67, 0.5), 0px 4px 10px rgba(255, 255, 255, 0.1);
-    
+  &:hover,
+  &:focus {
+    box-shadow: 0px 8px 20px rgba(134, 229, 67, 0.5),
+      0px 4px 10px rgba(255, 255, 255, 0.1);
   }
 }
 
@@ -126,7 +120,7 @@
   font-size: 24px;
   line-height: calc(28 / 24);
   color: $secondaryTextColor;
-  
+
   @include tablet-only {
     margin-bottom: 56px;
     font-size: 56px;
@@ -163,7 +157,7 @@
   font-size: 24px;
   line-height: calc(28 / 24);
   color: $secondaryTextColor;
-  animation:fade 400ms ease-in-out forwards;
+  animation: fade 400ms ease-in-out forwards;
   @include tablet-only {
     margin-bottom: 56px;
     font-size: 56px;
@@ -173,17 +167,8 @@
     margin-bottom: 56px;
     font-size: 64px;
     line-height: calc(75 / 64);
-
   }
 }
-
-
-
-
-
-
-
-
 
 .links-modal {
   display: inline-block;

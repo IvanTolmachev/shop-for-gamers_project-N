@@ -1,86 +1,95 @@
 <!-- contacts-page-main -->
 
-<!-- <main class="contacts-bgr"> -->'
-    '
-    <section class="contacts-page section">
-        <div class="contacts-page__container">
-            
-                <!-- <h2 class="contacts-page__title">Сontacts</h2> -->
+<!-- <main class="contacts-bgr"> -->
+<section class="contacts-page section">
+    <div class="contacts-page__container">
 
-                <!-- line -->
-                <div class="container__title">
-                    <div class="title__left">
-                        <h1 class="title__name contacts__title">Сontacts</h1>
-                        <div class="title__b1"></div>
-                        <div class="title__b2"></div>
+        <!-- <h2 class="contacts-page__title">Сontacts</h2> -->
+
+        <!-- line -->
+        <div class="container__title">
+            <div class="title__left">
+                <h1 class="title__name contacts__title">Сontacts</h1>
+                <div class="title__b1"></div>
+                <div class="title__b2"></div>
+            </div>
+
+            <div class="title__right">
+                <div class="title__b3"></div>
+                <div class="title__b4"></div>
+            </div>
+        </div>
+
+
+
+        <div class="contacts__container">
+
+            <!-- img in css -->
+            <div class="contacts-page__img-box"></div>
+
+            <div class="contacts__general">
+                <div class="contacts__box">
+
+                    <div class="contacts__info-box">
+                        <p class="contacts__order-info">In case of queries about order handling and/or delay, drop us an
+                            email at</p>
+                        <a class="contacts__link" href="mailto:info@shopforgamers.com" target="_blank"
+                            rel="noopener noreferrer">
+                            info@shopforgamers.com</a>
                     </div>
 
-                    <div class="title__right">
-                        <div class="title__b3"></div>
-                        <div class="title__b4"></div>
+                    <div class="contacts__info">
+                        <div class="contacts__info-box">
+                            <span class="contacts-box-title">
+                                Email
+                            </span>
+                            <a class="contacts__link" href="mailto:Sfg.info@gmail.com" target="_blank"
+                                rel="noopener noreferrer">
+                                Sfg.info@gmail.com</a>
+                        </div>
+
+                        <div class="contacts__info-box">
+                            <span class="contacts-box-title">Phone number</span>
+                            <a class="contacts__link" href="tel:+380936432288">
+                                +38 (093) 643 22 88</a>
+                            <a class="contacts__link" href="tel:+380503454423">
+                                +38 (050) 345 44 23</a>
+                        </div>
                     </div>
                 </div>
 
+                <div class="contacts__form-section">
+                    <div class="contacts-page__form-group">
+                        <strong class="contacts__form-name">contact us</strong>
+                        <form class="contacts-form" name="call-back-form" autocomplete="on" novalidate>
+
+                            <div class="call-back-group" role="group">
+                                <input class="call-back-input" type="text" name="username" id="username"
+                                    placeholder="Nikita Semenov" pattern="\w{3,16}" required minlength="3">
+                                <label class="call-back-lable" for="username">Name</label>
+
+                                <input class="call-back-input" placeholder="nikita@gmail.com" type="email"
+                                    name="usermail" id="usermail" required>
+                                <label class="call-back-lable" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" for="usermail">Email</label>
 
 
-                <div class="contacts__container">
+                                <label class="lable-comment" for="text">
+                                    Leave your message
+                                </label>
+                                <textarea class="call-back-textarea" name="usermessage" id="text" cols="15"
+                                    rows="5"></textarea>
 
-                    <!-- img in css -->
-                    <div class="contacts-page__img-box"></div>
 
-                    <div class="contacts__general">
-                        <div class="contacts__box">
-
-                            <div class="contacts__info-box">
-                                <p class="contacts__order-info">In case of queries about order handling and/or delay, drop us an
-                                    email at</p>
-                                <a class="contacts__link" href="mailto:info@shopforgamers.com" target="_blank" rel="noopener noreferrer">
-                                    info@shopforgamers.com</a>
-                            </div>
-                            
-                            <div class="contacts__info-box">
-                                <span class="contacts-box-title">
-                                    Email
-                                </span>
-                                <a class="contacts__link" href="mailto:Sfg.info@gmail.com" target="_blank"
-                                    rel="noopener noreferrer">
-                                    Sfg.info@gmail.com</a>
                             </div>
 
-                            <div class="contacts__info-box">
-                                <span class="contacts-box-title">Phone number</span>
-                                <a class="contacts__link" href="tel:+380936432288">
-                                    +38 (093) 643 22 88</a>
-                                <a class="contacts__link" href="tel:+380503454423">
-                                    +38 (050) 345 44 23</a>
-                            </div>
-                        </div>
-
-                        <div class="contacts__form-section">
-                            <div class="contacts-page__form-group">
-                                <strong class="contacts__form-name">contact us</strong>
-                                <form class="contacts-form" name="call-back-form" autocomplete="on" novalidate>
-
-                                    <div class="call-back-group" role="group">
-                                        <label class="call-back-lable" for="username">Name</label>
-                                        <input class="call-back-input" type="text" name="username" id="username" required minlength="3">
-                                        
-                                        <label class="call-back-lable" for="usermail">Email</label>
-                                        <input class="call-back-input" type="email" name="usermail" id="usermail" required>
-
-                                        <label class="call-back-lable" for="text">Leave your message</label>
-                                        <textarea class="call-back-textarea" name="usermessage" id="text" cols="15" rows="5"></textarea>
-
-                                        <button class="call-back-button" type="submit">
-                                            <span class="call-back-button-text">send</span>
-                                        </button>
-
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+                            <button class="call-back-button" type="submit">
+                                <span class="call-back-button-text">send</span>
+                            </button>
+                        </form>
                     </div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 <!-- </main> -->

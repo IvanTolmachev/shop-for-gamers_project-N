@@ -1,26 +1,19 @@
 .sale {
-  // width: 100%;
-  // min-width: 320px;
-  // margin: 0 auto;
+  position: relative;
   padding: 0 18px 48px 18px;
 
-  // @media screen and (min-width: 480px) {
-  //   width: 480px;
-  // }
-
   @media screen and (min-width: 768px) {
-    // width: 768px;
     padding: 0 80px 120px 80px;
   }
 
   @media screen and (min-width: 1280px) {
-    // width: 1280px;
     padding: 0 40px 120px 40px;
   }
 }
 
-.sale-section-title {
-  margin-bottom: 43px;
+.anchor {
+  top: -272px;
+  position: absolute;
 }
 
 .sale-list {
@@ -37,9 +30,7 @@
   @include desktop {
     gap: 20px;
   }
-
 }
-
 
 .sale-item {
   width: 100%;
@@ -47,24 +38,23 @@
 
   // }
   @include tablet {
-    width: calc((100% - 38px)/2);
+    width: calc((100% - 38px) / 2);
   }
 
   @include desktop {
-    width: calc((100% - 60px)/4);
+    width: calc((100% - 60px) / 4);
   }
 
   // outline: 1px solid tomato;
 }
 
-.sale-item:nth-child(n+5) {
+.sale-item:nth-child(n + 5) {
   display: none;
 
   @include tablet {
     display: block;
   }
 }
-
 
 .sale-img {
   width: 100%;
@@ -132,52 +122,144 @@
 
   &:hover,
   &:focus {
-    box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.5), 0px 4px 10px rgba(134, 229, 67, 0.1);
+    box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.5),
+      0px 4px 10px rgba(134, 229, 67, 0.1);
   }
 }
 
-// .sale-bg {
-//     background-color: $primaryBgColor;
-//     // background-color: transparent;
-//     background-size: cover;
-//     background-repeat: no-repeat;
-//     background-position: center bottom;
+// Полоска
 
-//     background-image: url(../images/accessories-page/accessories_m-1x.jpg);
+// .container__title {
+//   display: flex;
+//   align-items: flex-end;
+//   padding-bottom: 16px;
+//   overflow: hidden;
 
-//     @media (min-device-pixel-ratio: 2),
-//     (min-resolution: 192dpi),
-//     (min-resolution: 2dppx) {
-//         & {
-//             background-image:
-//                 url(../images/accessories-page/accessories_m-2x.jpg);
-//         }
-//     }
+//   @media screen and (min-width: 768px) {
+//     padding-bottom: 24px;
+//   }
+// }
 
-//     @media screen and (min-width: 768px) {
-//         background-size: 768px;
-//         background-image: url(../images/accessories-page/accessories_t-1x.jpg);
+// .title__b1 {
 
+//   margin-left: -500px;
+//   height: 8px;
+//   border-bottom: 1px solid $curlineTopColor;
+//   border-right: 1px solid $curlineTopColor;
+//   background-color: inherit;
 
-//         @media (min-device-pixel-ratio: 2),
-//         (min-resolution: 192dpi),
-//         (min-resolution: 2dppx) {
-//             & {
-//                 background-image: url(../images/accessories-page/accessories_t-2x.jpg);
-//             }
-//         }
-//     }
+//   @media screen and (min-width: 768px) {
+//     height: 19px;
+//   }
+// }
 
-//     @media screen and (min-width: 1280px) {
-//         background-size: 1280px;
-//         background-image: url(../images/accessories-page/accessories_d-1x.jpg);
+// .title__b2 {
+//   height: $lineShink;
+//   margin-right: -$lineShink;
+//   margin-left: -500px;
+//   border-bottom: 1px solid $curlineBottomColor;
 
-//         @media (min-device-pixel-ratio: 2),
-//         (min-resolution: 192dpi),
-//         (min-resolution: 2dppx) {
-//             & {
-//                 background-image: url(../images/accessories-page/accessories_d-2x.jpg);
-//             }
-//         }
-//     }
+//   background-color: inherit;
+//   box-shadow: 0px 4px 25px rgba(123, 227, 74, 0.25);
+
+//   @media screen and (min-width: 768px) {
+//     $lineShink: 8px;
+//     height: $lineShink;
+//     margin-right: -$lineShink;
+//   }
+
+// }
+
+// .title__b3 {
+//   width: 105%;
+//   height: $lineShink;
+//   border-top: 1px solid $curlineTopColor;
+
+//   box-shadow: 0px 4px 25px rgba(123, 227, 74, 0.25);
+//   background-color: inherit;
+
+//   @media screen and (min-width: 768px) {
+//     $lineShink: 8px;
+//     height: $lineShink;
+//   }
+// }
+
+// .title__b4 {
+//   width: 105%;
+//   height: 8px;
+//   margin-left: $lineShink;
+//   border-top: 1px solid $curlineBottomColor;
+//   border-left: 1px solid $curlineBottomColor;
+//   // box-shadow: 0px 4px 25px rgba(40, 120, 13, 0.25);
+//   background-color: inherit;
+
+//   @media screen and (min-width: 768px) {
+//     $lineShink: 8px;
+//     height: 19px;
+//     margin-left: $lineShink;
+
+//   }
+// }
+
+.title-left {
+  margin-left: calc(((100% - 320px) / 2) + 80px);
+
+  @media screen and (min-width: 480px) {
+    margin-left: calc(((100% - 480px) / 2) + 102px);
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-left: calc(((100% - 768px) / 2) + 142px);
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-left: calc(((100% - 1280px) / 2) + 142px);
+  }
+}
+
+// .title__right {
+//   width: 100%;
+// }
+
+.sale-name {
+  display: inline-block;
+  white-space: nowrap;
+  margin-right: 6px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  color: $secondaryTextColor;
+  margin-right: 10px;
+
+  @include mobile {
+    font-size: 44px;
+  }
+
+  @include tablet {
+    font-size: 56px;
+    line-height: 1.18;
+    margin-right: 72px;
+  }
+}
+
+// .title__name {
+//   // width: 768px;
+//   display: inline-block;
+//   white-space: nowrap;
+//   margin-right: 80px;
+//   font-size: 26px;
+//   font-weight: 600;
+//   line-height: 1.0769;
+//   color: $secondaryTextColor;
+//   // text-align: center;
+
+//   @media screen and (min-width: 480px) {
+//     font-size: 44px;
+//     line-height: 1.1786;
+//   }
+
+//   @media screen and (min-width: 768px) {
+//     font-size: 56px;
+//     line-height: 1.1786;
+//   }
 // }

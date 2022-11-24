@@ -1,0 +1,455 @@
+.contacts-bgr {
+    padding: 0;
+
+        background-size: fixed;
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        //Mobile background
+        background-image: url(../images/contacts/mobil-bgr.jpg);
+        // max-width: 450px;
+
+        //Tablet background
+        @media screen and (min-width: 768px) {
+            background-image: url(../images/contacts/tablet-bgr.jpg);
+            // max-width: 1199px;
+        }     
+
+        //Desktop background
+        @media screen and (min-width: 1280px) {
+            background-image: url(../images/contacts/desktop-bgr.jpg);
+            // width: 1280px;
+        }
+
+        // border-top: 
+        //     0px shadow 0px 4px 4px rgba(17, 168, 26, 0.2),
+        //     0px 4px 50px rgba(94, 236, 54, 0.5),
+        //     0px 4px 10px rgba(97, 162, 58, 0.2);
+}
+
+.contacts-page {
+    padding-top: 40px;
+    padding-bottom: 48px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: 768px) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+}
+
+.contacts-page__container .title__left {
+    margin-left: 0;
+}
+
+.contacts__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: calc(28/24);
+    letter-spacing: 0em;
+    color: $secondaryTextColor;
+    margin-bottom: 8px;
+    margin-left: 16px;
+
+    @media screen and (min-width: 768px) {
+        font-size: 56px;
+        font-weight: 600;
+        line-height: calc(66/56);
+        letter-spacing: 0em;
+        margin-bottom: 8px;
+        margin-left: 99px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        margin-left: 144px;
+    }
+}
+
+.contacts-page__container .container__title {
+    padding-bottom: 24px;
+
+    @media screen and (min-width: 768px) {
+        padding-bottom: 40px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        padding-bottom: 48px;
+    }
+}
+
+.contacts-page__img-box {
+    width: 100%;
+    max-width: 450px;
+    height: 346px;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    //Mobile img
+    background-image: url(../images/contacts/contacts_sd-@1x.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        & {
+            background-image: url(../images/contacts/contacts_sd-@2x.jpg);
+        }
+    }
+
+    @media screen and (min-width: 450px) {
+        border-radius: 12px;
+    }
+
+    //Tablet img
+    @media screen and (min-width: 768px) {
+        max-width: 688px;
+        height: 346px;
+
+        background-image: url(../images/contacts/contacts_md-@1x.jpg);
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/contacts/contacts_md-@2x.jpg);
+        }
+    }
+
+    //Desktop img
+    @media screen and (min-width: 1200px) {
+        background-image: url(../images/contacts/contacts_ld-@1x.jpg);
+        min-width: 1200px;
+        height: 346px;
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/contacts/contacts_ld-@2x.jpg)
+        }
+    }
+}
+
+.contacts__general {
+    padding-top: 16px;
+
+    @media screen and (min-width: 768px) {
+        // padding-top: 32px;
+        padding-top: 50px;
+    }
+
+        @media screen and (min-width: 1280px) {
+            display: flex;
+            flex-direction: row;
+            gap: 122px;
+            padding-top: 60px;
+            justify-content: center;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+}
+
+.contacts__container {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: calc(19/16);
+    letter-spacing: 0em;
+    color: $secondaryTextColor;
+
+    // @media screen and (min-width: 450px) {
+    //     margin-left: 40px;
+    //     margin-right: 40px;
+    // }
+
+        @media screen and (min-width: 768px) {
+            font-size: 24px;
+        }
+
+}
+
+.contacts__box {
+    padding-left: 16px;
+    padding-right: 16px;
+
+    // @media screen and (min-width: 768px) {
+    //     padding-left: 40px;
+    //     padding-right: 40px;
+    // }
+
+    @media screen and (min-width: 768px) {
+        padding-left: 88px;
+        padding-right:88px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 488px;
+    }
+}
+
+.contacts__info-box {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 50px;
+        // margin-bottom: 0;
+    }
+}
+
+.contacts__info {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        gap: 75px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        flex-direction: column;
+        gap: 0px;
+    }
+}
+
+.contacts__order-info {
+    margin-bottom: 24px;
+    gap: 8px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 32px;
+    }
+}
+
+.contacts__box .contacts__link{
+    text-decoration: none;
+    color: $linkTextColor;
+    // margin-bottom: 24px;
+}
+
+.contacts__link {
+    //* Анімація */
+        transition-property: color;
+        transition-duration: $durationFunction;
+        transition-timing-function: $timingFunction;
+    
+    &:hover,
+    &:focus,
+    &:active {
+        color: $primaryTextColor;
+    }
+}
+
+.contacts__mail {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.contacts-title {
+    margin-bottom: 8px;
+}
+
+.contacts__form-section {
+    padding-top: 24px;
+    
+        @media screen and (min-width: 768px) {
+            padding-top: 40px;
+            padding-bottom: 0;
+        }
+    
+        @media screen and (min-width: 1280px) {
+            padding-top: 0px;
+        }
+
+}
+
+.contacts-page__form-group {
+    padding-left: 16px;
+    padding-right: 16px;
+
+    @media screen and (min-width: 768px) {
+        padding-left: 88px;
+        padding-right: 88px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 591px;
+    }
+}
+
+.contacts__form-name {
+    // margin-bottom: 16px;
+
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: calc(28/24);
+    letter-spacing: 0em;
+    color: $primaryTextColor;
+
+    @media screen and (min-width: 768px) {
+        font-size: 36px;
+    }
+}
+
+.contacts-form {
+    margin-top: 40px;
+
+    @media screen and (min-width: 1280px) {
+        margin-top: 48px;
+
+    }
+}
+
+.call-back-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin-bottom: 24px;
+
+    @media  screen and (min-width: 768px) {
+        margin-bottom: 34px;
+    }
+}
+
+.call-back-input {
+
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $curlineBottomColor;
+    width: 100%;
+    min-width: 289px;
+    // max-width: 591px;
+    color: $secondaryTextColor;
+    //* Анімація */
+        transition-property: border-bottom;
+        transition-duration: $durationFunction;
+        transition-timing-function: $timingFunction;
+
+    &:focus {
+        border-bottom: 1px solid $curlineBottomColor;
+    }
+
+
+    &::placeholder {
+        color: $primaryBgColor;
+    }
+}
+
+.call-back-lable {
+    margin-bottom: 40px;
+    transform: translateY(-101%);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: calc(20/16);
+    letter-spacing: 0em;
+    //* Анімація */
+        transition-property: color, transform;
+        transition-duration: $durationFunction;
+        transition-timing-function: $timingFunction;
+
+    .call-back-input:hover + & {
+        color: $hoverColor;
+    }
+    
+    .call-back-input:focus + &,
+    .call-back-input:not(:placeholder-shown) + & {
+        color: $hoverColor;
+        transform: translateY(-260%);        
+    }
+
+    @media screen and (min-width: 768px) {
+        font-size: 18px;
+    }
+}
+
+
+
+.lable-comment {
+    color: $textareaTextColor;
+    margin-bottom: 4px;
+    //* Анімація */
+        transition-property: color;
+        transition-duration: $durationFunction;
+        transition-timing-function: $timingFunction;
+
+    // .call-back-textarea:hover &,
+    // .call-back-textarea:focus & {
+    //     color: $hoverColor;
+    // }
+
+        @media screen and (min-width: 768px) {
+            font-size: 18px;
+        }
+}
+
+.call-back-textarea {
+    width: 100%;
+    height: 95px;
+    background-color: transparent;
+    border: 1px solid $curlineBottomColor;
+    color: $secondaryTextColor;
+}
+
+.call-back-button {
+    height: 51px;
+    width: 173px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 16px;
+    border: 1px solid $secondaryTextColor;
+    background: transparent;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+    //* Анімація */
+        transition-property: border-color;
+        transition-duration: $durationFunction;
+        transition-timing-function: $timingFunction;
+
+    &:hover,
+    &:focus {
+        border-color: $btnBgColor;
+    }
+        
+    @media screen and (min-width: 768px) {
+        height: 70px;
+        width: 306px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        height: 70px;
+        width: 306px;
+        margin: 0;
+    }   
+}
+
+.call-back-button-text {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: calc(19/16);
+    letter-spacing: 0em;
+    color: $secondaryTextColor;
+    //* Анімація */
+        transition-property: color;
+        transition-duration: $durationFunction;
+        transition-timing-function: $timingFunction;
+    
+    @media screen and (min-width: 768px) {
+        font-size: 32px;
+    }
+
+    .call-back-button:hover &,
+    .call-back-button:focus & {
+        color: $btnBgColor;
+    }
+
+}
