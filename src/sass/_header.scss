@@ -1,13 +1,12 @@
 .header {
-  // position: fixed;
-  // top: 0;
-  // left: 0;
-  // z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
   // display: flex;
   width: 100%;
-  background-color: $primaryBgColor;
   box-shadow: $boxShadow;
- 
+  background-color: $primaryBgColor;
 }
 
 .header__container {
@@ -27,7 +26,6 @@
     margin: -1px;
   }
 }
-
 
 .header__mobile {
   @media screen and (min-width: 1280px) {
@@ -57,24 +55,26 @@
   font-size: 16px;
   color: $secondaryTextColor;
   transition: text-shadow $durationFunction $timingFunction;
-  &:hover, &:focus{
-    text-shadow: 0px 4px 20px rgba(255, 255, 255, 0.5), 0px 4px 10px rgba(134, 229, 67, 0.1);;
-}
-&::after{
-  position: absolute;
-  top: 100%;
-  display: flex;
-  content: "";
-  width: 100%;
-  height: 2px;
-  border-radius: 2px;
-  background-color: $btnBgColor;
-  transform: scale(0);
- transition: transform $durationFunction $timingFunction;
-}
-&:hover:after {
-  transform: scaleX(1);
-}
+  &:hover,
+  &:focus {
+    text-shadow: 0px 4px 20px rgba(255, 255, 255, 0.5),
+      0px 4px 10px rgba(134, 229, 67, 0.1);
+  }
+  &::after {
+    position: absolute;
+    top: 100%;
+    display: flex;
+    content: '';
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: $btnBgColor;
+    transform: scale(0);
+    transition: transform $durationFunction $timingFunction;
+  }
+  &:hover:after {
+    transform: scaleX(1);
+  }
 }
 .header__button {
   background: $btnBgColor;
@@ -83,19 +83,19 @@
   height: 40px;
   font-weight: 700;
   font-size: 14px;
-  color: #000000;
+  color: $shopNowButton;
   transition: all $durationFunction $timingFunction;
-  &:hover, &:focus{
+  &:hover,
+  &:focus {
     box-shadow: $boxShadow;
   }
 }
 
 // -------------------мобила-планшет---------------------------
 
-.mob-menu-wraper{
-  @media screen and(min-width:1279px){
+.mob-menu-wraper {
+  @media screen and(min-width:1279px) {
     display: none;
-    
   }
 }
 .logo {
@@ -108,30 +108,24 @@
   text-transform: uppercase;
   text-align: center;
   color: $secondaryTextColor;
-  @include tablet{
+  @include tablet {
     padding: 40px 0;
   }
   transition: text-shadow $durationFunction $timingFunction;
   &:hover,
   &:focus {
-  text-shadow: $boxShadow;
-    
+    text-shadow: $boxShadow;
   }
 }
-
 
 .burger-wraper {
   display: flex;
   align-items: center;
-  background-color: $primaryBgColor;
   z-index: 15;
   height: 100%;
   width: 100%;
   justify-content: space-between;
-  
-  
 }
-
 
 .burger-menu.is-open::before {
   transform: rotate(45deg);
@@ -162,24 +156,26 @@
   width: 54px;
   height: 36px;
   cursor: pointer;
-  padding: 15px 0;  
+  padding: 15px 0;
   @include mobile-only {
     margin-left: auto;
   }
-  
 }
 
-.burger-menu:hover.burger-menu::before{
+.burger-menu:hover.burger-menu::before {
   background-color: $secondaryTextColor;
-  box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.5), 0px 4px 10px rgba(134, 229, 67, 0.1);
+  box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.5),
+    0px 4px 10px rgba(134, 229, 67, 0.1);
 }
-.burger-menu:hover.burger-menu::after{
+.burger-menu:hover.burger-menu::after {
   background-color: $secondaryTextColor;
-  box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.5), 0px 4px 10px rgba(134, 229, 67, 0.1);
+  box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.5),
+    0px 4px 10px rgba(134, 229, 67, 0.1);
 }
 .burger-menu:hover .burger-menu-item {
   background-color: $secondaryTextColor;
-  box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.5), 0px 4px 10px rgba(134, 229, 67, 0.1);
+  box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.5),
+    0px 4px 10px rgba(134, 229, 67, 0.1);
 }
 
 .burger-menu::before,
@@ -191,8 +187,9 @@
   height: 3.6px;
   left: 0;
   border-radius: 40px;
-  transition: transform 500ms ease, background-color $durationFunction $timingFunction ;
-  
+  transition: transform 500ms ease,
+    background-color $durationFunction $timingFunction;
+
   margin: 2px 0px;
 }
 
@@ -212,12 +209,11 @@
   left: 0;
   top: 16.2px;
   border-radius: 40px;
-  transition: background-color $durationFunction $timingFunction ;
-  
+  transition: background-color $durationFunction $timingFunction;
 }
 
 .menu {
-  background-color: black;
+  background-color: $mobileBgColor;
   flex-direction: column;
   align-items: center;
   pointer-events: none;
@@ -229,24 +225,45 @@
     top: 136;
   }
   left: 0;
-  width: 100%;
-  height: 100%;
-  transform: skewX(-101%);
-  transition: all 500ms linear;
+  width: 100vw;
+  height: 100vh;
+  transform: translateX(-101%);
+  transition: opacity 400ms linear, transform 700ms ease-in-out;
 
   &.is-open {
+    position: absolute;
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
     pointer-events: all;
     opacity: 1;
-    transform: skewX(-0);
+    transform: translateX(0);
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    transition: all 500ms linear;
+    transition: opacity 400ms linear, transform 500ms ease-in-out;
+    overflow: scroll;
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: 100vw, 100vh;
+    background-image: url('../images/mobile-menu/bg-m1x.png');
+    @media screen and (min-width: 320px) {
+      @include retina {
+        background-image: url('../images/mobile-menu/bg-m2x.png');
+      }
+    }
+    @include tablet {
+      background-image: url('../images/mobile-menu/bg-t1x.png');
+      @include retina {
+        background-image: url('../images/mobile-menu/bg-t2x.png');
+      }
+    }
   }
 }
 
 .menu-list {
+  height: 400px;
+  position: absolute;
   text-align: center;
   margin-top: 64px;
   @include tablet {
@@ -270,13 +287,12 @@
   text-transform: uppercase;
   transition: all 300ms ease-out;
   color: $secondaryTextColor;
-  
+
   &:hover,
   &:focus {
     color: $btnBgColor;
-    
-  text-shadow: $boxShadow;
-    
+
+    text-shadow: $boxShadow;
   }
 }
 
@@ -292,8 +308,9 @@
   color: $shopNowButton;
   border-radius: 16px;
   background-color: $btnBgColor;
-  transition: box-shadow  $durationFunction $timingFunction;
-  &:hover, &:focus{
+  transition: box-shadow $durationFunction $timingFunction;
+  &:hover,
+  &:focus {
     box-shadow: $boxShadow;
   }
 }
