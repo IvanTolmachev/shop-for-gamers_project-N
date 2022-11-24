@@ -1,132 +1,131 @@
-.hero{
-display: flex;
-align-items: center;
-max-width: 1280px;
-height: 601px;  
-background-image: url(../images/hero/Fon_hero.png),
-url(../images/hero/Framemob.png);
-background-repeat: no-repeat;
-background-color:transparent;
-background-size: cover, 304px 472px; 
-background-position: 0 0, top 104px left 16px;
+.hero {
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-top: -104px;
+  background-image: url(../images/hero/Framemob.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 
-    // 60px 99px, 150px 186px, 88px 42px;
-   
-    // top 57px left 16px,  top 0px right 0px, top 394px right 150px;
-
-    // margin: 0 auto;
-    // padding: 180px 0;
-    // url(../images/hero/mousemob.png),
-    // url(../images/hero/headphonesmob.png),
-    // url(../images/hero/keyboardmob.png);
-
-    @media screen and (min-width: 480px) {
-        width: 480px;
-    }
-
-    @media screen and (min-width: 768px) {
-        width: 768px;
-        height: 860px;
-        background-image: url(../images/hero/Fon_hero.png),
-        url(../images/hero/Frametab.png);
-        background-size: cover, 379px 616px;
-        // 100px 165px, 143px 69px, 180px 223px;
-        background-position: 0 0, top 33px right 0;
-        // top 49px right 166px, top 469px right 189px, top 226px right 20px;
-    // url(../images/hero/mousetab.png),
-    // url(../images/hero/keyboardtab.png),
-    // url(../images/hero/headphonestab.png);
-    }
-
-    @media screen and (min-width: 1280px) {
-        width: 1280px;
-        height: 860px;
-        background-image: url(../images/hero/Fon_hero.png), 
-        url(../images/hero/Framedesk.png);
-        background-size: cover, 668px 652px;
-        // , 133px 220px, 230px 111px, 270px 335px;
-        background-position: 0 0, right 78px top 134px;
-        //  top 69px right 459px, bottom 83px right 447px, top 155px right 91px;
-    // url(../images/hero/mousedesk.png),
-    // url(../images/hero/keyboarddesk.png),
-    // url(../images/hero/headphonesdesk.png);
-    }
+  @media screen and (max-width: 768px) {
+    margin-top: -104px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-top: -136px;
+    background-image: url(../images/hero/Frametab.png);
+  }
+  @media screen and (min-width: 1279px) {
+    background-image: url(../images/hero/Framedesk.png);
+  }
 }
-.hero-box{
-    @media screen and (min-width: 1280px) {
-        margin-top: 136px;
-        margin-left: 100px;
-      }
-}
-.hero-text{
-text-align: center;
-// margin: 0 auto 25px;
-font-size: 32px;
-line-height: 1.19;
-color: $secondaryTextColor;
-max-width: 247px;
-    & span{
-        white-space: nowrap;
-    }
 
-    @media screen and (max-width: 767px) {
-        margin: auto;
-        margin-bottom: 25px;
-    // text-align: left;
-    // margin:0 0 94px 40px ;
-    // max-width: 388px;
-    // font-size: 56px;
-    // line-height: 1.18;
+.hero-bg {
+  background-image: url(../images/hero/Fon_hero.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media screen and (max-width: 767px) {
+    background-position: -250px;
+  }
+  @media screen and (min-width: 768px) {
+    background-size: contain;
+    background-image: url(../images/hero/Fon_herotab.png);
+  }
+  @media screen and (min-width: 1280px) {
+    width: 1280px;
+    background-image: url(../images/hero/Fon_herodesk.png);
+  }
 }
-    @media screen and (min-width: 768px){
+.hero-container {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 601px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+
+  background-position: top 104px left 16px;
+
+  @media screen and (max-width: 767px) {
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 860px;
+  }
+}
+
+.hero-box {
+  @media screen and (min-width: 1280px) {
+    margin-top: 136px;
+    margin-left: 100px;
+  }
+}
+.hero-text {
+  text-align: center;
+  // margin: 0 auto 25px;
+  font-size: 32px;
+  line-height: 1.19;
+  color: $secondaryTextColor;
+  max-width: 247px;
+  & span {
+    white-space: nowrap;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin: auto;
+    margin-bottom: 25px;
+  }
+  @media screen and (min-width: 768px) {
     text-align: left;
     margin-bottom: 94px;
     max-width: 388px;
     font-size: 56px;
     line-height: 1.18;
-    & span{
-        white-space: normal;
-}}
-    @media screen and (min-width: 1280px) {
-    
+    & span {
+      white-space: normal;
+    }
+  }
+  @media screen and (min-width: 1280px) {
     margin-bottom: 40px;
     // margin-left: 100px;
     max-width: 515px;
     font-size: 64px;
-    line-height: 1.18;}
+    line-height: 1.18;
+  }
 }
 
-.hero-btn{
-//  margin-left: auto;
-// margin-right: auto;
-font-weight: 700;
-font-size: 16px;
-line-height: 1.19;
-text-transform: uppercase;
-cursor: pointer;
-color: $primaryBgColor;
-background-color: $btnBgColor;
-border-radius: 16px;
-padding: 16px 20px;
+.hero-btn {
+  //  margin-left: auto;
+  // margin-right: auto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.19;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: $primaryBgColor;
+  background-color: $btnBgColor;
+  border-radius: 16px;
+  padding: 16px 20px;
 
-    @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     margin: auto;
-}
+  }
 
-    @media screen and (min-width: 768px){
-//    margin: 0 0 0 40px;
+  @media screen and (min-width: 768px) {
+    //    margin: 0 0 0 40px;
     font-size: 32px;
     line-height: 1.19;
-
-}
-    @media screen and (min-width: 1280px){
+  }
+  @media screen and (min-width: 1280px) {
     // margin:0 100px;
-}
-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-&:hover,
-&:focus {
-    background-color: #86E543;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
+  }
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: $btnBgColor;
+    box-shadow: $boxShadow;
+  }
 }
