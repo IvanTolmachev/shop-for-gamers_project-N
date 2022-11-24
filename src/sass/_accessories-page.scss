@@ -92,6 +92,9 @@
   color: $btnBgColor;
   background-color: transparent;
 
+  transition: $durationFunction $timingFunction;
+  transition-property: background-color, color, box-shadow;
+
   &:hover,
   &:focus {
     background: $btnBgColor;
