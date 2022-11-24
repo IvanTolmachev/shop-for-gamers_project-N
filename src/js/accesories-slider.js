@@ -33,4 +33,5 @@ var a_swiper = new Swiper('.accesories-swiper', {
 a_swiper.on('resize', function () {
   // console.log('slide changed');
   a_swiper.update()
+  
 });
