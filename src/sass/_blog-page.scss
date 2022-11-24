@@ -1,3 +1,32 @@
+@media screen and (min-width: 1280px) {
+    .blog-page {
+        background-image: url(../images/blog-page/desctop/d_bg@1x.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width:1280px),
+       screen and (min-resolution: 192dpi) and (min-width:1280px),
+       screen and (min-resolution: 2dppx) and (min-width:1280px) {
+    .blog-page {
+                background-image: url(../images/blog-page/desctop/d_bg@2x.jpg);
+    }         
+}
+@media  screen and (min-width:768px) and (max-width:1279px) {
+    .blog-page{
+        background-image: url(../images/blog-page/tablet/t_bg@1x.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width:768px),
+screen and (min-resolution: 192dpi) and (min-width:768px),
+screen and (min-resolution: 2dppx) and (min-width:768px) {
+    .blog-page{
+        background-image: url(../images/blog-page/tablet/t_bg@2x.jpg);
+    }
+}
+
 .container__title {
     display: flex;
     align-items: flex-end;
@@ -71,18 +100,18 @@
     }
 }
 
-.title__left {
+.title__left-blog {
     // min-width: 280px;
-    margin-left: calc(((100% - 320px) / 2) + 20px);
+    margin-left: calc(((100% - 550px) / 2) + 20px);
 
     @media screen and (min-width: 480px) {
 
-        margin-left: calc(((100% - 480px) / 2) + 102px);
+        margin-left: calc(((100% - 480px) / 2) + 12px);
     }
 
     @media screen and (min-width: 768px) {
 
-        margin-left: calc(((100% - 768px) / 2) + 142px);
+        margin-left: calc(((100% - 768px) / 2) + 104px);
     }
 
     @media screen and (min-width: 1280px) {
@@ -100,22 +129,16 @@
     display: inline-block;
     white-space: nowrap;
     margin-right: 5px;
-    font-size: 26px;
-    font-weight: 600;
-    line-height: 1.0769;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.16;
     color: $secondaryTextColor;
     // text-align: center;
 
-    @media screen and (min-width: 480px) {
-        font-size: 44px;
-        line-height: 1.1786;
-    }
-
     @media screen and (min-width: 768px) {
         font-size: 56px;
-        line-height: 1.1786;
+        line-height: 1.18;
     }
-
 }
 // ======== Title ======== //
  .img-container {
@@ -159,7 +182,18 @@
     color: $btnBgColor;
     display: flex;
     justify-content: right;
-}
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+    
+        &:hover,
+        &:focus {
+            
+            text-shadow: 0px 4px 20px rgba(255, 255, 255, 0.5), 0px 4px 10px rgba(134, 229, 67, 0.1);
+        }
+    }
+
+
 
 .blog-slider {
     justify-content: center;
@@ -208,17 +242,19 @@
     .only-desctop {
         display: none;
     }
+
 }
 
 @media screen and (min-width:768px) and (max-width:1279px) {
     .only-tablet {
         display: flex;
         margin-bottom: 16px;
+        gap: 40px;
+        align-items: flex-end;
     }
 
     .title-container {
-        margin-left: 40px;
-        margin-top: auto;
+        max-width: 263px;
     }
 
     .color {
@@ -228,14 +264,15 @@
 
 @media screen and (min-width:768px) {
     .blog-page {
-        padding-top: 120px;
+        // padding-top: 120px;
         padding-bottom: 120px;
     }
     .blog-img {
         border-radius: 12px;
+        border: 1px solid $hoverColor;
     }
     .blog-list {
-        padding-top: 48px;
+        // padding-top: 48px;
         padding-bottom: 48px;
     }
 
@@ -255,21 +292,31 @@
         font-size: 24px;
         font-weight: 400;
         line-height: 1.17;
-        margin-bottom: 16px;
     }
+        .blog-list-content-first{
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.17;
+        color: $secondaryTextColor;
+        }
+        .link{
+            margin-top: 16px;
+        }
 }
 
 @media screen and (max-width:767px) {
    
     .blog-page {
-        padding-top: 40px;
+        // padding-top: 40px;
         padding-bottom: 48px;
     }
 
     .blog-list {
         padding-top: 20px;
     }
-
+    .title-container{
+        margin-bottom: 16px;
+    }
     .blog-list-title {
         font-size: 24px;
         line-height: 1.17;
@@ -285,6 +332,15 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 1.19;
-        margin-top: 16px;
+        // margin-top: 16px;
+    }
+    .blog-list-content-first {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.19;
+        color: $secondaryTextColor;
+    }
+    .link{
+        margin-top: 8px;
     }
 }
