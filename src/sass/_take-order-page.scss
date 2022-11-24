@@ -33,29 +33,21 @@
     }
 
     &-title{
-        margin-left: 15px;
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 500;
-        //font-size: 56px;
-        //line-height: 66px;
         font-size: 32px;
         line-height: 38px;
         @media screen and (min-width:768px) {
             font-size: 56px;
             line-height: 66px;
-            margin-left: 99px;
-            margin-bottom: 51px;
         }
         @media screen and (min-width:1280px) {
             font-size: 56px;
             line-height: 66px;
-            margin-left: 121px;
-            margin-bottom: 75px;
         }
        
         color: #FFFFFF;
-        margin-bottom: 35px;
         display: block;
         white-space: nowrap;
         
@@ -99,13 +91,27 @@
     }
 }
 
+.title__left_take{
+    margin-left: calc(((100% - 320px) / 2) + 20px);
+
+  @media screen and (min-width: 480px) {
+    margin-left: calc(((100% - 480px) / 2) + 102px);
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-left: calc(((100% - 768px) / 2) + 142px);
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-left: calc(((100% - 1280px) / 2) + 142px);
+  }
+}
+
 
 .product-title{
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
-    //font-size: 56px;
-    //white-space: nowrap;
     @media screen and (min-width:768px) {
         grid-column: 1/span 2;
         grid-row: 1;
@@ -116,11 +122,9 @@
         white-space: nowrap;
     }
     @media screen and (min-width:1280px) {
-        //width: 692px;
         grid-column: 2;
         font-size: 56px;
         line-height: 66px;
-        //white-space: nowrap;
     }
     font-size: 32px;
     line-height: 38px;
@@ -132,7 +136,7 @@
     font-weight: 500;
     font-size: 32px;
     line-height: 100%;
-    color: #86E543;
+    color: $primaryTextColor;
     @media screen and (min-width:768px) {
         white-space: nowrap;
     }
@@ -160,7 +164,6 @@
     line-height: 100%;
     /* identical to box height, or 24px */
     text-decoration-line: line-through;
-    color: #8D9289 !important;
+    color: $linkTextColor !important;
     }  
 }
-
