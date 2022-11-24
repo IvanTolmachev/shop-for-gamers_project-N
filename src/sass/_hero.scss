@@ -6,7 +6,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-
+ 
   @media screen and (max-width: 768px) {
     margin-top: -104px;
   }
@@ -57,29 +57,35 @@
 }
 
 .hero-box {
+    margin-top: 180px;
+    @media screen and (min-width: 768px) {
+        margin-top: 66px;
+    }
   @media screen and (min-width: 1280px) {
-    margin-top: 136px;
-    margin-left: 100px;
+    margin-top: 130px;
+    margin-left: 126px;
   }
+
 }
 .hero-text {
   text-align: center;
-  // margin: 0 auto 25px;
+  margin-bottom: 25px;
   font-size: 32px;
   line-height: 1.19;
   color: $secondaryTextColor;
   max-width: 247px;
+  
   & span {
     white-space: nowrap;
   }
 
-  @media screen and (max-width: 767px) {
-    margin: auto;
-    margin-bottom: 25px;
-  }
+//   @media screen and (max-width: 767px) {
+//    margin: auto;
+//   }
   @media screen and (min-width: 768px) {
     text-align: left;
-    margin-bottom: 94px;
+    margin-bottom: 0;
+ 
     max-width: 388px;
     font-size: 56px;
     line-height: 1.18;
@@ -88,8 +94,7 @@
     }
   }
   @media screen and (min-width: 1280px) {
-    margin-bottom: 40px;
-    // margin-left: 100px;
+   
     max-width: 515px;
     font-size: 64px;
     line-height: 1.18;
@@ -97,8 +102,9 @@
 }
 
 .hero-btn {
-  //  margin-left: auto;
-  // margin-right: auto;
+display: flex;
+max-width: 173px;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.19;
@@ -108,18 +114,22 @@
   background-color: $btnBgColor;
   border-radius: 16px;
   padding: 16px 20px;
+ 
 
   @media screen and (max-width: 767px) {
     margin: auto;
   }
 
   @media screen and (min-width: 768px) {
-    //    margin: 0 0 0 40px;
+  
     font-size: 32px;
     line-height: 1.19;
+    margin-top: 94px;
+    max-width: 306px;
   }
   @media screen and (min-width: 1280px) {
-    // margin:0 100px;
+   
+    margin-top: 40px;
   }
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
