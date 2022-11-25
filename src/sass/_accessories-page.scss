@@ -96,7 +96,8 @@
   transition-property: background-color, color, box-shadow;
 
   &:hover,
-  &:focus {
+  &:focus,
+  &.current {
     background: $btnBgColor;
     box-shadow: 0px 4px 4px rgba(134, 229, 67, 0.2);
     color: $primaryBgColor;
@@ -437,6 +438,15 @@ $lineShink: 4px;
   grid-auto-flow: column;
   box-sizing: border-box;
 }
+.wrapper-headset {
+  width: 1140px !important;
+}
+.wrapper-keyboard {
+  width: 855px !important;
+}
+.wrapper-mause {
+  width: 570px !important;
+}
 
 @media screen and (min-width: 480px) {
   .swiper-wrapper {
@@ -451,6 +461,15 @@ $lineShink: 4px;
     row-gap: 24px;
     column-gap: 38px;
   }
+  .wrapper-headset {
+    width: 1254px !important;
+  }
+  .wrapper-keyboard {
+    width: 931px !important;
+  }
+  .wrapper-mause {
+    width: 608px !important;
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -459,6 +478,18 @@ $lineShink: 4px;
     transform: translate3d(0px, 0px, 0px);
     column-gap: 20px;
     grid-template-rows: repeat(4, auto);
+  }
+  .wrapper-headset {
+    width: 1810px !important;
+    grid-template-rows: repeat(4, auto);
+  }
+  .wrapper-keyboard {
+    width: 1505px !important;
+    grid-template-rows: repeat(3, auto);
+  }
+  .wrapper-mause {
+    width: 1200px !important;
+    grid-template-rows: repeat(3, auto);
   }
 }
 
@@ -497,6 +528,10 @@ $lineShink: 4px;
   width: 40px;
   //  ====== green
   // background-color: $btnBgColor;
+}
+
+.slide-hide {
+  display: none;
 }
 
 .accessories-bg {
