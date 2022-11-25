@@ -1,0 +1,114 @@
+<section class="section section--dropdown">
+  <div class="container">
+    <h2 class="contacts__form-name">Make a choice</h2>
+    <div class="container__dropdown">
+      <div class="dropdown__choice">
+        <form name="dropdown-form" autocomplete="off" novalidate>
+          <div class="dropdown__group" role="group">
+            <input
+              class="dropdown__input dropdown__input--mT"
+              type="text"
+              name="username2"
+              id="username2"
+              placeholder="Nikita Semenov"
+              pattern="\w{3,16}"
+              required
+              minlength="3"
+            />
+            <label class="dropdown__lable dropdown__lable--bot" for="username2"
+              >Name</label
+            >
+            <input
+              class="dropdown__input"
+              placeholder="nikita@gmail.com"
+              type="email"
+              name="usermail2"
+              id="usermail2"
+              required
+            />
+            <label
+              class="dropdown__lable"
+              pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"
+              for="usermail2"
+              >Email</label
+            >
+          </div>
+        </form>
+        <div class="dropdown">
+          <button class="dropdown__button" type="button">Color Option</button>
+          <ul class="dropdown__list">
+            <li class="dropdown__list-item" data-value="K9D Black Orange">
+              K9D Black Orange
+            </li>
+            <li class="dropdown__list-item" data-value="K9D Silver Gray">
+              K9D Silver Gray
+            </li>
+            <li class="dropdown__list-item" data-value="K9U White Blue">
+              K9U White Blue
+            </li>
+          </ul>
+          <input
+            class="dropdown__input_hidden"
+            type="text"
+            name="select-category"
+            value=""
+          />
+        </div>
+        <div class="dropdown">
+          <button class="dropdown__button" type="button">Quantity</button>
+          <ul class="dropdown__list">
+            <li class="dropdown__list-item" data-value="1">1</li>
+            <li class="dropdown__list-item" data-value="2">2</li>
+            <li class="dropdown__list-item" data-value="3">3</li>
+            <li class="dropdown__list-item" data-value="4">4</li>
+            <li class="dropdown__list-item" data-value="5">5</li>
+            <li class="dropdown__list-item" data-value="6">6</li>
+            <li class="dropdown__list-item" data-value="7">7</li>
+            <li class="dropdown__list-item" data-value="8">8</li>
+            <li class="dropdown__list-item" data-value="9">9</li>
+            <li class="dropdown__list-item" data-value="10">10</li>
+          </ul>
+          <input
+            class="dropdown__input_hidden"
+            type="text"
+            name="select-category"
+            value=""
+          />
+        </div>
+        <div class="dropdown">
+          <button class="dropdown__button" type="button">Payment</button>
+          <ul class="dropdown__list">
+            <li class="dropdown__list-item" data-value="PayPal">PayPal</li>
+            <li class="dropdown__list-item" data-value="MasterCard">
+              MasterCard
+            </li>
+            <li class="dropdown__list-item" data-value="Visa">Visa</li>
+          </ul>
+          <input
+            class="dropdown__input_hidden"
+            type="text"
+            name="select-category"
+            value=""
+          />
+        </div>
+      </div>
+      <div class="dropdown__choice-textarea">
+        <form
+          class="dropdown__form"
+          name="call-back-form"
+          autocomplete="off"
+          novalidate
+        >
+          <label class="lable__comment" for="text"> Leave your message </label>
+          <textarea
+            class="choice-textarea"
+            name="usermessage"
+            id="text"
+            cols="15"
+            rows="5"
+          ></textarea>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,212 @@
+.section--dropdown {
+  padding-top: 0;
+}
+.container__dropdown {
+  margin-top: 48px;
+  @include desktop {
+    display: flex;
+  }
+}
+
+.dropdown__group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown__input {
+  margin-top: 40px;
+  font-size: 18px;
+  font-weight: 400;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid $primaryTextColor;
+  width: 100%;
+  min-width: 289px;
+  color: $secondaryTextColor;
+  //* Анімація */
+  transition-property: border-bottom;
+  transition-duration: $durationFunction;
+  transition-timing-function: $timingFunction;
+  &--mT {
+    margin: 0;
+  }
+  &::placeholder {
+    color: $primaryBgColor;
+  }
+}
+
+.dropdown__lable {
+  bottom: -23px;
+  position: absolute;
+  padding-bottom: 4px;
+  color: $secondaryTextColor;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: calc(20 / 18);
+  transform: translateY(-101%);
+  //* Анімація */
+  transition-property: color, transform;
+  transition-duration: $durationFunction;
+  transition-timing-function: $timingFunction;
+
+  &--bot {
+    bottom: 44px;
+  }
+
+  .dropdown__input:hover + & {
+    color: $hoverColor;
+  }
+
+  .dropdown__input:focus + &,
+  .dropdown__input:not(:placeholder-shown) + & {
+    color: $hoverColor;
+    transform: translateY(-190%);
+  }
+}
+
+.lable__comment {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 18px;
+  font-weight: 400;
+  color: $textareaTextColor;
+  //* Анімація */
+  transition-property: color;
+  transition-duration: $durationFunction;
+  transition-timing-function: $timingFunction;
+}
+
+.dropdown__choice {
+  margin-bottom: 40px;
+  @include desktop {
+    margin-bottom: 0;
+    margin-right: 10px;
+    width: calc(100% / 2 - 10px);
+  }
+}
+
+.dropdown__choice-textarea {
+  @include desktop {
+    max-height: 100%;
+    height: auto;
+    margin-left: 10px;
+    width: calc(100% / 2 - 10px);
+  }
+}
+
+.dropdown__form {
+  height: 100%;
+}
+
+.choice-textarea {
+  min-height: 256px;
+  padding: 4px;
+  font-size: 18px;
+  font-weight: 400;
+  color: $secondaryTextColor;
+  width: 100%;
+  height: calc(100% - 26px);
+  outline: none;
+  background-color: transparent;
+  border: 1px solid $primaryTextColor;
+}
+
+.dropdown {
+  margin-top: 40px;
+  max-width: 100%;
+  //   position: relative;
+  &__button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: calc(20 / 18);
+    color: $secondaryTextColor;
+    width: 100%;
+    text-align: left;
+    background: inherit;
+    border-bottom: 1px solid $btnBgColor;
+    border-radius: 0;
+    height: 24px;
+    padding-bottom: 4px;
+    cursor: pointer;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 8px;
+      right: 0;
+      // transform: translateY(-50%);
+      width: 18px;
+      height: 13px;
+      background: url('../images/down-arrow.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      pointer-events: none;
+      transition: 200ms ease;
+    }
+    &_active {
+      &::after {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+  &__list {
+    // margin-top: 8px;
+    // padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 0;
+    list-style-type: none;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    border-bottom: 1px solid $btnBgColor;
+    // background: #ffffff;
+    overflow: hidden;
+    width: 100%;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: 200ms ease;
+    &_visible {
+      height: 76px;
+      opacity: 1;
+      margin-top: 8px;
+      visibility: visible;
+      overflow-y: scroll;
+    }
+
+    &_visible::-webkit-scrollbar {
+      width: 0; /* ширина всей полосы прокрутки */
+    }
+
+    &-item {
+      margin: 0;
+      padding: 0;
+      //   padding: 15px;
+      cursor: pointer;
+      font-size: 18px;
+      line-height: calc(20 / 18);
+      font-weight: 400;
+      color: $secondaryTextColor;
+      transition: 200ms ease;
+      &_active {
+        background: $dropdownBgColor;
+      }
+      &:hover {
+        background: $dropdownBgColor;
+      }
+    }
+  }
+  &__input {
+    &_hidden {
+      display: none;
+    }
+  }
+}
