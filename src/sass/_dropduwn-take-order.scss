@@ -18,6 +18,7 @@
   margin-top: 40px;
   font-size: 18px;
   font-weight: 400;
+  border-radius: 0;
   background-color: transparent;
   border: none;
   outline: none;
@@ -62,7 +63,7 @@
   .dropdown__input:focus + &,
   .dropdown__input:not(:placeholder-shown) + & {
     color: $hoverColor;
-    transform: translateY(-190%);
+    transform: translateY(-220%);
   }
 }
 
