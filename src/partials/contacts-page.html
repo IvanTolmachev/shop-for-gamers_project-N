@@ -114,7 +114,11 @@
                 ></textarea>
               </div>
 
-              <button class="call-back-button" type="submit">
+              <button
+                class="js-open-modal call-back-button"
+                type="submit"
+                data-modal="3"
+              >
                 <span class="call-back-button-text">send</span>
               </button>
             </form>
@@ -123,5 +127,20 @@
       </div>
     </div>
   </div>
+  <div class="overlay js-overlay-modal">
+    <div class="modal js-modal-close" data-modal="3">
+      <button class="modal-cross-btn" type="button">
+        <svg class="modal-cross" width="32">
+          <use href="./images/icons.svg#icon-cross"></use>
+        </svg>
+      </button>
+      <p class="modal-title-ok">
+        Thank you <span> for your message!</span>
+        <span> We will contact you </span> <span>soon!</span>
+      </p>
+      <a class="modal-btn" href="./take-order.html">ok</a>
+    </div>
+  </div>
 </section>
+
 <!-- </main> -->

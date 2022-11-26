@@ -211,3 +211,78 @@
     }
   }
 }
+
+.order-form__btn-container {
+ 
+  margin-top: 24px;
+
+ 
+
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    margin-top: 48px;
+  }
+}
+.order-form__btn {
+  display: block;
+  margin: auto;
+
+  width: 174px;
+  padding: 15px 42px;
+
+  color: inherit;
+  border-radius: $primaryBorderRadius;
+  border: 1px solid $primaryTextColor;
+  background-color: transparent;
+  transition: all $durationFunction $timingFunction;
+
+  @media screen and (min-width: 768px) {
+    width: 306px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin: 0;
+  }
+
+  &:hover,
+  &:focus {
+    color: $primaryBgColor;
+    background-color: $hoverColor;
+    box-shadow: $boxShadow;
+    cursor: pointer;
+  }
+
+  &-sale {
+    color: $primaryBgColor;
+    background-color: $btnBgColor;
+  }
+
+  &-cart {
+    color: $primaryTextColor;
+    margin-top: 16px;
+    padding: 15px 35px;
+    @media screen and (min-width: 768px) {
+      margin-top: 24px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      margin-top: 0;
+    }
+  }
+}
+
+.btn-sale-text,
+.btn-cart-text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.19;
+  text-transform: uppercase;
+  text-align: center;
+  
+  @media screen and (min-width: 768px) {
+    font-size: 32px;
+  }
+
+}

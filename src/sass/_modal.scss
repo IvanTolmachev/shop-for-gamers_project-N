@@ -25,17 +25,18 @@
   visibility: hidden;
   width: 90vw;
   max-width: 480px;
-  padding: 100px 30px;
+  padding: 100px 0;
   text-align: center;
   background-color: $primaryBgColor;
   transition: all 0.5ms linear;
+  border-radius: 20px;
   @include tablet-only {
     max-width: 688px;
-    padding: 88px 25px;
+    padding: 88px 0;
   }
   @include desktop {
     max-width: 768px;
-    padding: 88px 80px;
+    padding: 88px 0;
   }
 }
 
@@ -115,55 +116,84 @@
 }
 
 .modal-title-choice {
+  margin: 0 auto;
+  max-width: 184px;
   margin-bottom: 32px;
   font-weight: 600;
   font-size: 24px;
   line-height: calc(28 / 24);
   color: $secondaryTextColor;
-
+  & span{
+    white-space: nowrap;
+  }
   @include tablet-only {
+    max-width: 550px;
     margin-bottom: 56px;
     font-size: 56px;
     line-height: calc(66 / 56);
+    & span{
+      white-space: normal;
+    }
   }
   @include desktop {
+    max-width: 608px;
     margin-bottom: 56px;
     font-size: 64px;
     line-height: calc(75 / 64);
+    & span {
+      white-space:normal;
+    }
   }
 }
 
+
 .modal-title-order {
+  margin: 0 auto;
+  max-width: 232px;
   margin-bottom: 20px;
   font-weight: 600;
   font-size: 24px;
   line-height: calc(28 / 24);
   color: $secondaryTextColor;
+  & span{
+    white-space: nowrap;
+  }
   @include tablet-only {
+    max-width: 576px;
     margin-bottom: 56px;
     font-size: 56px;
     line-height: calc(66 / 56);
   }
   @include desktop {
+    max-width: 608px;
     margin-bottom: 56px;
     font-size: 64px;
     line-height: calc(75 / 64);
   }
+  
 }
 
 .modal-title-ok {
+  margin: 0 auto;
+  max-width: 214px;
   margin-bottom: 32px;
   font-weight: 600;
   font-size: 24px;
   line-height: calc(28 / 24);
   color: $secondaryTextColor;
   animation: fade 400ms ease-in-out forwards;
+  & span {
+    white-space: nowrap;
+  }
   @include tablet-only {
+    max-width: 639px;
     margin-bottom: 56px;
     font-size: 56px;
     line-height: calc(66 / 56);
   }
   @include desktop {
+    
+    max-width: 730px;
     margin-bottom: 56px;
     font-size: 64px;
     line-height: calc(75 / 64);
