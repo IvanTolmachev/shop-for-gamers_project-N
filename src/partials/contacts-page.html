@@ -89,18 +89,14 @@
 
                 <input
                   class="call-back-input"
+                  pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"
                   placeholder="nikita@gmail.com"
                   type="email"
                   name="usermail"
                   id="usermail"
                   required
                 />
-                <label
-                  class="call-back-lable"
-                  pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"
-                  for="usermail"
-                  >Email</label
-                >
+                <label class="call-back-lable" for="usermail">Email</label>
 
                 <label class="lable-comment" for="text">
                   Leave your message
