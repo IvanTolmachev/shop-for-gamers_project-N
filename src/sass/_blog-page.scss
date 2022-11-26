@@ -183,7 +183,7 @@
   color: $secondaryTextColor;
 }
 
-.link {
+.link-blog {
   color: $btnBgColor;
   display: flex;
   justify-content: right;
@@ -289,6 +289,7 @@
     font-size: 24px;
     font-weight: 400;
     line-height: 1.17;
+    margin-bottom: 16px;
   }
 
   .blog-list-content-first {
@@ -298,9 +299,6 @@
     color: $secondaryTextColor;
   }
 
-  .link {
-    margin-top: 16px;
-  }
 }
 
 @media screen and (max-width: 767px) {
@@ -332,7 +330,7 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 1.19;
-    // margin-top: 16px;
+    margin-bottom: 8px;
   }
 
   .blog-list-content-first {
@@ -342,9 +340,6 @@
     color: $secondaryTextColor;
   }
 
-  .link {
-    margin-top: 8px;
-  }
 }
 
 .swiper-blog {
