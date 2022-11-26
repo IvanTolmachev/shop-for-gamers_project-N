@@ -150,7 +150,7 @@
       pointer-events: none;
       transition: 200ms ease;
     }
-    &_active {
+    &--active {
       &::after {
         transform: rotate(-180deg);
       }
@@ -175,7 +175,7 @@
     opacity: 0;
     visibility: hidden;
     transition: 200ms ease;
-    &_visible {
+    &--visible {
       height: 76px;
       opacity: 1;
       margin-top: 8px;
@@ -183,7 +183,7 @@
       overflow-y: scroll;
     }
 
-    &_visible::-webkit-scrollbar {
+    &--visible::-webkit-scrollbar {
       width: 0; /* ширина всей полосы прокрутки */
     }
 
@@ -197,7 +197,7 @@
       font-weight: 400;
       color: $secondaryTextColor;
       transition: 200ms ease;
-      &_active {
+      &--active {
         background: $dropdownBgColor;
       }
       &:hover {
@@ -206,7 +206,7 @@
     }
   }
   &__input {
-    &_hidden {
+    &--hidden {
       display: none;
     }
   }
