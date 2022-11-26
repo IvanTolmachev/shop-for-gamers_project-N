@@ -407,13 +407,14 @@
   display: block;
   cursor: pointer;
   //* Анімація */
-  transition-property: border-color;
+  transition-property: all;
   transition-duration: $durationFunction;
   transition-timing-function: $timingFunction;
 
   &:hover,
   &:focus {
-    border-color: $btnBgColor;
+  box-shadow: (0px 4px 20px rgba(255, 255, 255, 0.1));
+  text-shadow:(0px 4px 20px rgba(255, 255, 255, 0.4)) ;
   }
 
   @media screen and (min-width: 768px) {
@@ -436,18 +437,12 @@
   letter-spacing: 0em;
   color: $secondaryTextColor;
   //* Анімація */
-  transition-property: color;
-  transition-duration: $durationFunction;
-  transition-timing-function: $timingFunction;
+  
 
   @media screen and (min-width: 768px) {
     font-size: 32px;
   }
 
-  .call-back-button:hover &,
-  .call-back-button:focus & {
-    color: $btnBgColor;
-  }
 }
 
 .title__left-contact {
