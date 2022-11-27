@@ -6,7 +6,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
- 
+
   @media screen and (max-width: 768px) {
     margin-top: -104px;
   }
@@ -20,6 +20,7 @@
 }
 
 .hero-bg {
+  min-width: 320px;
   background-image: url(../images/hero/Fon_hero.png);
   background-size: cover;
   background-position: center;
@@ -57,15 +58,14 @@
 }
 
 .hero-box {
-    margin-top: 180px;
-    @media screen and (min-width: 768px) {
-        margin-top: 66px;
-    }
+  margin-top: 180px;
+  @media screen and (min-width: 768px) {
+    margin-top: 66px;
+  }
   @media screen and (min-width: 1280px) {
     margin-top: 130px;
     margin-left: 126px;
   }
-
 }
 .hero-text {
   text-align: center;
@@ -74,18 +74,18 @@
   line-height: 1.19;
   color: $secondaryTextColor;
   max-width: 247px;
-  
+
   & span {
     white-space: nowrap;
   }
 
-//   @media screen and (max-width: 767px) {
-//    margin: auto;
-//   }
+  //   @media screen and (max-width: 767px) {
+  //    margin: auto;
+  //   }
   @media screen and (min-width: 768px) {
     text-align: left;
     margin-bottom: 0;
- 
+
     max-width: 388px;
     font-size: 56px;
     line-height: 1.18;
@@ -94,7 +94,6 @@
     }
   }
   @media screen and (min-width: 1280px) {
-   
     max-width: 515px;
     font-size: 64px;
     line-height: 1.18;
@@ -102,8 +101,8 @@
 }
 
 .hero-btn {
-display: flex;
-max-width: 173px;
+  display: flex;
+  max-width: 173px;
 
   font-weight: 700;
   font-size: 16px;
@@ -114,21 +113,18 @@ max-width: 173px;
   background-color: $btnBgColor;
   border-radius: 16px;
   padding: 16px 20px;
- 
 
   @media screen and (max-width: 767px) {
     margin: auto;
   }
 
   @media screen and (min-width: 768px) {
-  
     font-size: 32px;
     line-height: 1.19;
     margin-top: 94px;
     max-width: 306px;
   }
   @media screen and (min-width: 1280px) {
-   
     margin-top: 40px;
   }
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),

@@ -2,7 +2,7 @@
 
 <!-- <main class="contacts-bgr"> -->
 <section class="contacts-page section">
-  
+
   <div class="contacts-page__container">
     <!-- <h2 class="contacts-page__title">Сontacts</h2> -->
 
@@ -20,113 +20,81 @@
       </div>
     </div>
 
-    <div class="contacts__container">
+    <div class="contacts__container container">
       <!-- img in css -->
-      <div class="contacts-page__img-box"></div>
+      <div class="contacts-page__img-box">
+        <picture>
+          <source srcset="./images/contacts/contacts_sd-@1x.jpg 1x, ./images/contacts/contacts_sd-@2x.jpg 2x"
+            media="(max-width: 767px)" />
+          <source srcset="./images/contacts/contacts_md-@1x.jpg 1x, ./images/contacts/contacts_md-@2x.jpg 2x"
+            media="(max-width: 1279px)" />
+          <source srcset="./images/contacts/contacts_ld-@1x.jpg 1x, ./images/contacts/contacts_ld-@2x.jpg 2x"
+            media="(min-width: 1280px)" />
+          <img class="team__img" src="./images/contacts/contacts_ld-@1x.jpg" alt="Ігор Дем'яненко" width="1200"
+            height="346" />
+        </picture>
+      </div>
 
       <div class="contacts__general container">
         <div class="contacts__box">
           <div class="contacts__info-box">
             <p class="contacts__order-info">
               In case of queries about order handling and/ <span>or delay, drop us an
-                email at</span> 
+                email at</span>
             </p>
-            <a
-              class="contacts__link"
-              href="mailto:info@shopforgamers.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              info@shopforgamers.com</a
-            >
+            <a class="contacts__link" href="mailto:info@shopforgamers.com" target="_blank" rel="noopener noreferrer">
+              info@shopforgamers.com</a>
           </div>
 
           <div class="contacts__info">
             <div class="contacts__info-box">
               <span class="contacts-box-title"> Email </span>
-              <a
-                class="contacts__link"
-                href="mailto:Sfg.info@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Sfg.info@gmail.com</a
-              >
+              <a class="contacts__link" href="mailto:Sfg.info@gmail.com" target="_blank" rel="noopener noreferrer">
+                Sfg.info@gmail.com</a>
             </div>
 
             <div class="contacts__info-box">
               <span class="contacts-box-title">Phone number</span>
               <a class="contacts__link" href="tel:+380936432288">
-                +38 (093) 643 22 88</a
-              >
+                +38 (093) 643 22 88</a>
               <a class="contacts__link" href="tel:+380503454423">
-                +38 (050) 345 44 23</a
-              >
+                +38 (050) 345 44 23</a>
             </div>
           </div>
         </div>
 
+        <!-- Contact form -->
         <div class="contacts__form-section">
           <div class="contacts-page__form-group">
             <strong class="contacts__form-name">contact us</strong>
-            <form
-              class="contacts-form"
-              name="call-back-form"
-              autocomplete="on"
-              novalidate
-            >
+            <form class="contacts-form" name="call-back-form" autocomplete="on" novalidate>
 
-                <div class="dropdown__group dropdown__group--position" role="group">
-                  <input
-                    class="dropdown__input dropdown__input--mT"
-                    type="text"
-                    name="username2"
-                    id="username2"
-                    placeholder="Nikita Semenov"
-                    pattern="\w{3,16}"
-                    required
-                    minlength="3"
-                  />
-                  <label class="dropdown__lable dropdown__lable--bot" for="username2"
-                    >Name</label
-                  >
-                  <input
-                    class="dropdown__input"
-                    pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"
-                    placeholder="nikita@gmail.com"
-                    type="email"
-                    name="usermail2"
-                    id="usermail2"
-                    required
-                  />
-                  <label class="dropdown__lable" for="usermail2">Email</label>
-                </div>
-
-                <label class="lable-comment" for="text">
-                  Leave your message
-                </label>
-                <textarea
-                  class="call-back-textarea"
-                  name="usermessage"
-                  id="text"
-                  cols="15"
-                  rows="5"
-                ></textarea>
+              <div class="dropdown__group dropdown__group--position" role="group">
+                <input class="dropdown__input dropdown__input--mT" type="text" name="username2" id="username2"
+                  placeholder="Nikita Semenov" pattern="\w{3,16}" required minlength="3" />
+                <label class="dropdown__lable dropdown__lable--bot" for="username2">Name</label>
+                <input class="dropdown__input" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"
+                  placeholder="nikita@gmail.com" type="email" name="usermail2" id="usermail2" required />
+                <label class="dropdown__lable" for="usermail2">Email</label>
               </div>
 
-              <button
-                class="js-open-modal call-back-button"
-                type="submit"
-                data-modal="3"
-              >
-                <span class="call-back-button-text">send</span>
-              </button>
-            </form>
+              <label class="lable-comment" for="text">
+                Leave your message
+              </label>
+              <textarea class="call-back-textarea" name="usermessage" id="text" cols="15" rows="5"></textarea>
           </div>
+            <!-- BUTTON -->
+          <button class="js-open-modal call-back-button" type="submit" data-modal="3">
+            <span class="call-back-button-text">send</span>
+          </button>
+          </form>
         </div>
       </div>
     </div>
   </div>
+  </div>
+
+  <!-- MODAL -->
   <div class="overlay js-overlay-modal">
     <div class="modal js-modal-close" data-modal="3">
       <button class="modal-cross-btn" type="button" aria-expanded="off modal window">

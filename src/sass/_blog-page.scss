@@ -1,3 +1,7 @@
+.blog-page {
+  min-width: 320px;
+}
+
 @media screen and (min-width: 1280px) {
   .blog-page {
     background-image: url(../images/blog-page/desctop/d_bg@1x.jpg);
@@ -298,7 +302,6 @@
     line-height: 1.17;
     color: $secondaryTextColor;
   }
-
 }
 
 @media screen and (max-width: 767px) {
@@ -339,7 +342,6 @@
     line-height: 1.19;
     color: $secondaryTextColor;
   }
-
 }
 
 .swiper-blog {
