@@ -87,7 +87,8 @@
 
 .sale-price {
   display: flex;
-  gap: 80px;
+  // gap: 80px;
+  justify-content: space-between;
   align-items: center;
   padding-left: 8px;
   padding-right: 15px;
