@@ -213,10 +213,7 @@
 }
 
 .order-form__btn-container {
- 
   margin-top: 24px;
-
- 
 
   @media screen and (min-width: 1280px) {
     display: flex;
@@ -231,6 +228,7 @@
 
   width: 174px;
   padding: 15px 42px;
+  user-select: none;
 
   color: inherit;
   border-radius: $primaryBorderRadius;
@@ -280,9 +278,8 @@
   line-height: 1.19;
   text-transform: uppercase;
   text-align: center;
-  
+
   @media screen and (min-width: 768px) {
     font-size: 32px;
   }
-
 }
