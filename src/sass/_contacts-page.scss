@@ -349,6 +349,7 @@
   margin: 0 auto;
   display: block;
   cursor: pointer;
+  user-select: none;
   //* Анімація */
   transition-property: all;
   transition-duration: $durationFunction;

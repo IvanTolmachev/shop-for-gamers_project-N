@@ -298,6 +298,7 @@
 }
 
 .mobile-header-link {
+  user-select: none;
   @include mobile-only {
     display: none;
   }

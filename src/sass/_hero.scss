@@ -117,6 +117,7 @@
   background-color: $btnBgColor;
   border-radius: 16px;
   padding: 16px 20px;
+  user-select: none;
 
   @media screen and (max-width: 767px) {
     margin: auto;
