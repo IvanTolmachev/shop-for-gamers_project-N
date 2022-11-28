@@ -233,6 +233,7 @@
   &.is-open {
     position: absolute;
     z-index: 5;
+    min-width: 320px;
     width: 100vw;
     height: 100vh;
     pointer-events: all;

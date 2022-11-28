@@ -1,3 +1,5 @@
+
+
 .overlay {
   opacity: 0;
   visibility: hidden;
@@ -13,9 +15,13 @@
   @media screen and (max-width: 479px) {
     padding: 200px 24px;
   }
+  &::-webkit-scrollbar {
+    width: 0px;}
 }
 
 .modal {
+  &::-webkit-scrollbar {
+    width: 0px;}
   position: absolute;
   top: 50%;
   left: 50%;
